@@ -1,0 +1,13 @@
+{
+  "name": "EverLight OS – Context Logs",
+  "description": "Canonical EverLight OS context and memory logs for RAG and agents.",
+  "schema_version": 1,
+  "base_url": "https://ai.everlightos.com/everlight-context/logs",
+  "local_root": "./logs",
+  "file_extension": ".md",
+  "content_mode": "full-file",
+  "notes": [
+    "Each .md file in ./logs is a standalone log document.",
+    "This manifest + index.json are the canonical crawl descriptors."
+  ]
+}
