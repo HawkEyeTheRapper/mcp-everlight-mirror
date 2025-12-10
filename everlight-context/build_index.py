@@ -2,7 +2,7 @@ from pathlib import Path
 import json
 import urllib.parse
 
-BASE_URL = "https://context.everlightos.com/everlight-context/logs"
+BASE_URL = "https://mcp.everlightos.com/everlight-context/logs"
 LOGS_DIR = Path("logs")
 
 entries = []
