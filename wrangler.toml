@@ -1,0 +1,17 @@
+# wrangler.toml - place at repository root
+name = "everlight-context-logs"
+account_id = "74b94b7ffc15701b77e53f81bea03813"
+compatibility_date = "2025-12-10"
+workers_dev = false
+type = "javascript"
+
+[build]
+command = "npm ci && node scripts/build-logs.js"
+
+[site]
+bucket = "./dist"
+include = ["**/*"]
+
+# Optional: deploy to a specific route / zone
+ route = "mcp.everlightos.com/*"
+# zone_id = "REPLACE_WITH_ZONE_ID"
