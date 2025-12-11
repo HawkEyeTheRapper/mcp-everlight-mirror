@@ -1,0 +1,28 @@
+name = "everlight-mcp-api"
+main = "api/worker.js"
+account_id = "74b94b7ffc15701b77e53f81bea03813"
+compatibility_date = "2025-12-10"
+workers_dev = false
+
+routes = [
+  { pattern = "api.aetheranalysis.com/mcp/*", zone_id = "2356c6de416d3f31f3be5205da129979" }
+]
+
+kv_namespaces = [
+  { binding = "INDEX_KV", id = "b0d040fcab004a8b92d98337e1e19e38" }
+]
+
+r2_buckets = [
+  { binding = "LOG_BUCKET", bucket_name = "everlight-mcp-logs" }
+]
+
+vectorize = [
+  { binding = "VECTORIZE", index_name = "everlight-memory-context-bge" }
+]
+
+[vars]
+INDEX_URL = "https://mcp.aetheranalysis.com/everlight-context/index.json"
+LOG_BASE_URL = "https://mcp.aetheranalysis.com/everlight-context/logs"
+API_BASE = "https://api.aetheranalysis.com"
+
+# Optional: EMBEDDINGS_URL / EMBEDDINGS_MODEL / EMBEDDINGS_KEY can be set at deploy time
