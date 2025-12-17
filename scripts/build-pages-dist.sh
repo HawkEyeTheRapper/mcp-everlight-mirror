@@ -8,6 +8,7 @@ DIST_DIR="${DIST_DIR:-$ROOT/dist}"
 
 SITE_TITLE="${SITE_TITLE:-EverLight Context Logs}"
 SITE_SUBTITLE="${SITE_SUBTITLE:-HTML archive for Pages (generated index + navigation)}"
+BASE_URL="https://mcp.aetheranalysis.com/everlight-context/logs"
 
 if [[ ! -d "$LOGS_DIR" ]]; then
   echo "❌ Logs folder not found: $LOGS_DIR" >&2
@@ -20,16 +21,23 @@ echo "🧹 Step 0: Clear dist/"
 rm -rf "$DIST_DIR"/*
 mkdir -p "$DIST_DIR"
 
-echo "🚚 Step 1: MOVE all .html from logs/ -> dist/ (leave .md in place)"
+echo "🚚 Step 1: Copy all .html and .md from logs/ -> dist/"
 shopt -s nullglob
 html_files=("$LOGS_DIR"/*.html)
+md_files=("$LOGS_DIR"/*.md)
 
-if (( ${#html_files[@]} == 0 )); then
-  echo "⚠️ No .html files found in: $LOGS_DIR"
+if (( ${#html_files[@]} > 0 )); then
+  cp -f "$LOGS_DIR"/*.html "$DIST_DIR"/
+  echo "✅ Copied ${#html_files[@]} HTML files into dist/"
 else
-  # Move (not copy)
-  mv -f "$LOGS_DIR"/*.html "$DIST_DIR"/
-  echo "✅ Moved ${#html_files[@]} HTML files into dist/"
+  echo "⚠️ No .html files found in: $LOGS_DIR"
+fi
+
+if (( ${#md_files[@]} > 0 )); then
+  cp -f "$LOGS_DIR"/*.md "$DIST_DIR"/
+  echo "✅ Copied ${#md_files[@]} Markdown files into dist/"
+else
+  echo "⚠️ No .md files found in: $LOGS_DIR"
 fi
 shopt -u nullglob
 
@@ -147,6 +155,34 @@ with open(os.path.join(dist, "index.html"), "w", encoding="utf-8") as f:
 print(f"✅ Wrote {os.path.join(dist, 'index.html')} with {len(items)} links.")
 PY
 
+echo "🗺️ Step 3: Generate sitemap.xml"
+export DIST_DIR BASE_URL
+python3 - <<'PY_SITEMAP'
+import os, html
+from datetime import datetime, timezone
+
+dist = os.environ["DIST_DIR"]
+base_url = os.environ["BASE_URL"]
+
+files = [f for f in os.listdir(dist) if f.lower().endswith((".html", ".md"))]
+files.sort(key=lambda s: s.lower())
+
+now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
+sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+
+for f in files:
+    url = f"{base_url}/{html.escape(f)}"
+    sitemap += f"  <url>\n    <loc>{url}</loc>\n    <lastmod>{now}</lastmod>\n  </url>\n"
+
+sitemap += '</urlset>\n'
+
+with open(os.path.join(dist, "sitemap.xml"), "w", encoding="utf-8") as f:
+    f.write(sitemap)
+
+print(f"✅ Wrote {os.path.join(dist, 'sitemap.xml')} with {len(files)} URLs.")
+PY_SITEMAP
+
 echo "✅ Done. dist/ is Pages-ready."
-echo "   - HTML moved to: $DIST_DIR"
-echo "   - Markdown stays in: $LOGS_DIR"
+echo "   - Files copied to: $DIST_DIR"
