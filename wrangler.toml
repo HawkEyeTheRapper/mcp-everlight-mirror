@@ -4,12 +4,8 @@ account_id = "74b94b7ffc15701b77e53f81bea03813"
 compatibility_date = "2023-12-10"
 
 [pages]
-# Note: `main` branch is the default production branch
-# Set this to a different branch for preview/staging environments
 branch = "main"
 
 [pages.build]
-# This command is run to build the project
-command = "./scripts/build-pages-dist.sh"
-# The directory to upload
+command = "python3 scripts/build-site.py"
 upload_dir = "dist"
