@@ -1,17 +1,15 @@
-# wrangler.toml - place at repository root
+# wrangler.toml - Cloudflare Pages Deployment
 name = "mcp-everlight-mirror"
 account_id = "74b94b7ffc15701b77e53f81bea03813"
-compatibility_date = "2025-12-10"
-workers_dev = false
-type = "javascript"
+compatibility_date = "2023-12-10"
 
-[build]
-command = "npm ci && node scripts/build-logs.js"
+[pages]
+# Note: `main` branch is the default production branch
+# Set this to a different branch for preview/staging environments
+branch = "main"
 
-[site]
-bucket = "./dist"
-include = ["**/*"]
-
-# Optional: deploy to a specific route / zone
- route = "mcp.everlightos.com/*"
-# zone_id = "REPLACE_WITH_ZONE_ID"
+[pages.build]
+# This command is run to build the project
+command = "./scripts/build-pages-dist.sh"
+# The directory to upload
+upload_dir = "dist"
