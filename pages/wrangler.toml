@@ -1,0 +1,11 @@
+# wrangler.toml - Cloudflare Pages Deployment
+name = "mcp-everlight-mirror-pages"
+account_id = "74b94b7ffc15701b77e53f81bea03813"
+compatibility_date = "2023-12-10"
+
+[pages]
+branch = "main"
+
+[pages.build]
+command = "bash ../scripts/build-pages-dist.sh"
+upload_dir = "../dist"
