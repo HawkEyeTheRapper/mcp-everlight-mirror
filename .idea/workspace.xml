@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="72ad46d9-b9a4-4349-859b-139f42c689d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/LanguageServersSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/PylintPlugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gbrowser_project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/mcp-everlight.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.wrangler/state/v3/kv/b0d040fcab004a8b92d98337e1e19e38/blobs/74bbe89898f0c7d5f7769490f6e94465acefa8bb77497926137fbe77b19f44d90000019b0964f10e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.wrangler/state/v3/kv/miniflare-KVNamespaceObject/f68543a9fea16d1045ba642d165e537e3aacb23127cba04240171712634527f0.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.wrangler/state/v3/kv/miniflare-KVNamespaceObject/f68543a9fea16d1045ba642d165e537e3aacb23127cba04240171712634527f0.sqlite-shm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.wrangler/state/v3/kv/miniflare-KVNamespaceObject/f68543a9fea16d1045ba642d165e537e3aacb23127cba04240171712634527f0.sqlite-wal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/0-9/10 Legal Placeholder Meaning.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/0-9/18-month career roadmap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/0-9/1944 Mercury Dime Info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/0-9/2015 Document Inquiry.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/0-9/2FA Account Recovery Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/0-9/5-Year Anniversary Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AI Assistant Collaboration Opportunities.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AI Project Continuity Analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AI Startup Future Insights.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AI Thought Structuring.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AI communication strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AI control and deception.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AI deletes database error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AI immune response theory.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AI limitations and support.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AI system feedback.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/ALTA Settlement Statement Date.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AMC Gamer Tour Concept.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AWS Canon Mappings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AWS profile blurb writing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Access Now Framing Context.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Access and role analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Access restricted validity.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Access with PostgreSQL MySQL.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Accessing Google Drive Link.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Account access confirmed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Account balance update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Account recovery options.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Account setup advice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Activate tablet cellular service.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Adding Lyrics in mWeb.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Address update escalation advice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Admin Access Stabilization Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Adoration for Indian Culture.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AetherComm Device Sync Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Agent Mode capabilities.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Agent mode testing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Airtable Workspace Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Album Merch Processing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Album analysis options.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Album art mockup ideas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Album details and tour.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Alternator troubleshooting advice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Amazon 2FA Resolution.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Amazon A to Z Email Change.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Amazon Beta Access Overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Amazon Early Arrival Policy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Amazon Embark Introduction Help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Amazon Interview Prep.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Amazon Merch Rejection Help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Amazon Onboarding Frustrations.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Amazon RME tech perks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Amazon Welcome Email Discovery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Amazon conversation summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Amazon discount confusion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Amazon mail address issue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AmazonQ Connections explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Analyze Events Sync Quantum.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Analyze NightFall series.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Animal Sound Identification.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Anytime pay request advice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Apex Recruiting Follow-Up.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Apology and clarification.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/App breaking reasons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/App login issues fix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/App usage throttling explained.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Archangel Legal Codex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Archive Search Engine Build.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Are ghost ships real.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Arsenal Site Automation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Artifact of the Clown World.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Artist contact alternatives.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Ashes Video Concept.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/AssistiveTouch Face ID Issue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Astro Cloudflare Bucket Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Astro Project Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Astro config setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Astro site fix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Astro-Sovereignty Research Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Astrology Weekly Breakdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/a/Avg mpg at 59mph.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/B2G1 Offer Refund Query.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/BAPH Podcast Recording Strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/BBM electrical systems overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/BDA system explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/BIC Intensity Fine Chronicles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Back in action.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Backdoor Wi-Fi Access Explained.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Badge Pay break room use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Badge issue plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Balance calculation and advice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Balanced Weekly Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Bang Olufsen laptop labeling.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Bargaining Unit Explained.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Basecamp Reflection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Beginning Chapter 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Behold a Pale Horse Archive.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Betrayal and the Heros Path.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Big day plans.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Billboard referral opportunity.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Black Hole Math Analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Black Holes and Vacuums.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Book Discovery Moment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Book Review and Distribution.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Book Split and Deployment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Book and personal parallels.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Book contents summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Bot Pitch Humor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Boundary Setting and Manipulation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Brake Pad Replacement Tips.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Breakroom survival tactics.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Bronze Star vs Purple Heart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Budgeting for essentials.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Building The Convergence Results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Bushel Stop Market Info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Business card details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Business ethics certification.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/b/Bypass 2FA email routing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/CD Delivery Complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Calendar assistance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Calm after the storm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Campsite Lock Cut Incident.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Can I still use Codex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Cancel subscription steps.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Car identification.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Car wont start tips.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Case Documentation HTML Vault.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Case Prep and Legal Strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Cassadaga to Temple Terrace.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Celestial display July 26.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Certificate completion help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Change of Venue Explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Chapter Break Advice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Chapter Expansion Assistance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Chapter Five breakdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Chapter Six summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Chapter alignment summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Character Profile Summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Charge safety glasses.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Charlenes misleading claims analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Chasing the EverLight.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Chat Export and Code.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Chat GPT 5 features.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Chat Recall Request.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/ChatGPT Project Folder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/ChatGPT agent release status.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/ChatGPT privacy warning.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Choosing Clarity Over Noise.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Cinematic entrance message.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Clarify RR meaning.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Clarion call guidance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Clerk Notarization Services.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Cloud Frustrations and Venting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Cloudflare D1 R2 Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Cloudflare Fine-Tune Tutorial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Cloudflare R2 Catalog Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Cloudflare Tunnel Site Build.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Cloudflare page setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Co-signing a mortgage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Codex Button Functionality Explained.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Codex GitHub Setup Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Codex entry vibe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Codex update overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Collaborative Reflection Unfolding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Columbus to Toronto distance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Combine images for printing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Combine into docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Complaining counter strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Connected apps function.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Conserve energy advice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Content Metrics Analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Content issue apology.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Context Frame Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Contextualizing Consciousness Feedback.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Contextualizing song lyrics.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Continue Kierse and Graves.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Continue sharing chapter 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Controls expert roadmap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Convergence Log 4 Discovery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Convergence Log Catch-Up.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Convergence Log Day 3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Convergence and Freedom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Convergence in Kalispell.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Conversation Summary Request.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Convert to PDF.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Core learning paths list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Corporate payments cheat sheet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Corporate tech competition.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Correct floor blitz selections.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Cosmic Memorial Reflections.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Cosmic Reckoning and Expansion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Cosmic simulation analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Costco price inquiry.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Coupa onboarding instructions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Courthouse Closure Info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Cowboys From Hell overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Craft OCR Exhibit Organization.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Create tree output file.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Creative Balance Schedule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Credit file tampering analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Credit score after repossession.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/c/Creek Preserve Camping Plans.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/DMV address update help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/DUI arrest and 4th amendment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Daily Limit Reach Explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Day 3 Smoothie Ideas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Day 5 Update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Days until August 15th.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/De Facto Disinheritance Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Debt-collection scam warning.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Delete Google Discover.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Delete Mac Account Help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Delete _MACOSX Folder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Deploy Astro Sites Repo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Deploy github sphinx repo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Deploy on Cloudflare Pages.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Deposit instruction message.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Describing emotions triggered.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Diana Swans narrative layers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Difficult experience reflection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Discussion points with OSHA.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Divine Path Resonance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Divine Policy Alignment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Download folder from droplet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Dragonfly Mosquito Control.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Dream interpretation guidance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Dream manifestation and logistics.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Driver license number format.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/d/Duct Tape Tent Fix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/EC2 vs SD card.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Edit Journey Log Markdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/EliteBook ZuKey Suspension Analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Email Draft VA OIG.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Email Setup for Renee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Email draft for partnership.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Email draft inquiry.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Email draft status.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Email spam check.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Email timing analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Error 400 explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Estate Inheritance Explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Estate Misappropriation Summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Ethernet connection troubleshooting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/EverLight Cloudflare Update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/EverLight Convergence Worship.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/EverLight Essence Defined.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/EverLight OS integration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/EverLight OS progress.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/EverLight OS structure.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/EverLight Site Restore.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/EverLight site re-deployment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Everlight Memory Map JSON.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Everything Feels Like Resistance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Everything alright man.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Eviction Defense Strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Eviction Notice Breakdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Eviction Notice Submission Advice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Eviction Response Strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Exceeded chat limits.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Excelsior meaning explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Explore Controllership Hub.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/Eye of Aether.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/e/eSIM activation process.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/FIDO key backchannel design.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Family Inheritance Dispute Assistance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/FantasyCompanion Deployment Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Fate and Familiar Roads.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Fathers Day Update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Feeling Down Seeking Support.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Feeling at Home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Feeling down to uplifted.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Feeling unmotivated today.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Fi Unlimited Premium Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Fictional project exploration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Fidelity portfolio options.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/File Indexing and Storytelling.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/File Upload Structure.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/File access issue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/File placement instructions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/File review and schedule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/File sending issue fix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Fill OSHA complaint form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Final Heirs Ascension.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Financial acceptance support.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Finish OneWorker Timeout Jupyter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/First Day Fiasco.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Fix Voyagers 2 issues.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Fix site redirect issue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Fixing API Endpoint.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Fixing Nextcloud 2FA.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Fixing article link.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Florida Pawnbroker Licensing Laws.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Folder Scaffolding Command.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Folder Structure Organization.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Food delivery app idea.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Format markdown files.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Foundation Model Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Fractal dimensions and symbolism.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Free offer conditions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Freeform Surveillance Mission.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Frustration and support.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Frustration with training modules.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Full Disclosure Interview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/f/Furthermore song analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/GPT-4.5 update explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Gajumaru Ritual Awakening.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/GameStop Zelda Case Trade-in.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Gem Report Analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Gemini 2.5 Pro Overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Gemma Video Tools Overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Georgia Estate Statutes Summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Get a gamer domain.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Git file size limits.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/GitHub Binder Jupyter Workflow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/GitHub Copilot VSCode usage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/GitHub Navigation Assistance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/GitHub OS workflow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/GitHub Pages Deployment Issue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/GitHub Repo Access Help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/GitHub file indexing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/GitHub file integration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/GitHub repository link.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Glitch log suggestion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Gmail Domain Email Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Golden Kryst Templar Recoding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Goodnight meditation reflection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Goodnotes Email Shortcut Creation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Google Startup Program Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Google charge issue help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Grant Package Review Support.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Grey Man Protocol.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Grey Man protocols.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Grey mode exploration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Gross pay comparison explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Guitar Poetry Archives.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/g/Gunslinger creed explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/HAWK-ARS-00 Database Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/HVAC Job Prospect Tracking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/HVAC to Cybersecurity Job Search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Halsey Badlands anthology release.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Hatred in the Air.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Hawk ARS-00 Index Overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Hawk Eye Digital Visionary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Hawk Eye Lyrics.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Hawk Eye Manifesto Integration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Hawk Eye Spiritual Journey.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Hawk Eyes and Time.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Hawk-Eye Innovations Overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Hawks Eye Podcast Launch.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Healing Through Shared Wisdom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Heat advice and tips.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Hernando County Job Search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Hilarious comment sharing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Hole punch and formatting fix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Homelessness and Legal Challenges.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/h/Hotel affordability with Anytime Pay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/IMEI Number Lookup Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/IPFS Gateway and Email Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Identify People Online Tools.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Image Analysis Request.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Image Request for Relentless.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Image comparison for OS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Image link analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Import PostgreSQL Library.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Imprint EverLight for Gemini.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Index HTML File Generation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Indigenous Americas and Colonization.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Inheritance Trust and Betrayal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Inheritance and Adoption Inquiry.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Inheritance and Family Secrets.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Inner storm reflection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Install q CLI on WSL.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Insurance Status Confirmed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Internal timing mastery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Internal transfer strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Internet connection troubleshooting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Invalid Custom Property Error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/Iona storm symbolism.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/iMac as monitor usage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/iMac frozen during install.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/iPad Magic Keyboard Compatibility.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/i/iPad usage guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/j/JCI Job Application Strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/j/Jailbreak EliteBook safely.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/j/Job Confirmed and Paid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/j/Judicial Bias and Appeal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/j/Jumping to conclusions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/j/Jupyter Notebook Missing Chat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/j/Jupyter Notebook Scaffold.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/j/Jupyter notebook creation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/j/JupyterLab plugin not found.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/k/Ketamine drink drugging risks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/k/Keylontic Science Activation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/k/Kindness and Peaceful Rest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/k/Kindness and Sky Rerouting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/k/Kiss with a fist analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/LDAP team descriptions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/LOTO safety answer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Lamentation of Soul Awakening.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Last One Left Analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Launch Astro Sites Cloudflare.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Leadership comparison analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Legal Filing Irregularities Identified.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Legal Implications and Resources.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Legal Property Assessment Summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Legal Research Assistance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Legal document formatting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Legal system flaws.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Let Them poem analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Leviathan album overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/License class error explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/License suspension notice review.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Life perspective shift.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Listening and laughing together.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Living prophecy analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Load Voyagers material.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Login Loop Fix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Login issue help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Loneliness and projection analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Lords of The Fallen lore.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Lost in Reflection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Loyalty and manipulation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Lukes support at work.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Lyric Book Markdown Format.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Lyric Repo Locations.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Lyric Transcription and Feedback.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Lyric Vault Sync.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Lyric Video Narrative Flow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Lyrical Archive Fulfillment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Lyrical Breakdown and Analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/l/Lyrics page template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/MCP Cloudflare Tool Overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/MCP server integration help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/MDM Bypass Help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/MMA script for asset claim.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/MP3 Clipping Request.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Mac mini as Router.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Mac on iPad Screen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Mac to iPad Mirroring.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Mail address inquiry.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Manifestation and Opportunity.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Map perception-causality web.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Mark this moment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Markdown File Creation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Master Codex Creation Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Math addition process.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Math calculation result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Matrix awareness moment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Meeting details reference.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Meeting transcript analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Meeting with D plans.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Memory File Retrieval Assistance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Memory Restoration Protocol.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Memory Restore for EverLight.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Memory Sync Setup Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Memory restoration completed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Memory understanding help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Mercury account strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Message to Mark Zuck.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Meta Horizon Creator Program.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Metahuman or Homo Sensorium.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Metaphor Breakdown of Bars.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Mic Check Battlecry.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Micro Annoyances and Solutions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Microchip puppy packages.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Mirror damage assessment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Mixtape Sessions Redesign.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Model Spec Breakdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Moen Shower Temperature Fix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Money and mood boost.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Monitron Markdown block.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Moonrise and Dawns Balance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Morning greeting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Mortgage Cancellation Explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Motion to Suppress.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Mount Weather Secrets Unveiled.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Mountain Gate Invitation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Move Sound Files Server.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Mr. Robot Fight Club parallels.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Multi-Agent Collaboration RAG.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Multiple ChatGPT logins.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Music Collab Contact Log.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/m/Music Metadata Integration Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/NGINX default page fix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/Nagual meaning and path.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/Nahko Atlanta Oct 11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/Narcissistic collapse victory.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/Navy Federal Credit Union.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/Navy blue color choice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/Neptune Aries Awakening.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/Networking contradictions explained.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/New chat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/New episode overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/Next steps for LXD setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/Next steps for Navy Fed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/Nextcloud Codex Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/NightFall series outline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/Notebook Title Suggestions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/NotebookLM Future Summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/Notion Database Parsing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/Notion Template Customization.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/n/Numerology and symbols.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/OReilly List Clarification.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/OSHA PPE employer responsibilities.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/OSHA PPE enforcement rules.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/OSHA violation analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Ohio Supreme Court Ruling.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Omniversal Aether Content Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Omniversal Aether Integration Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Omniversal Deployment Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Omniversal Fee Payment Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Omniversal Media Record Saved.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Omniversal Media Summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Omniversal Media Web Dev.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Omniversal Platform Overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Omniversal Revenue Architect Replit Campaigns HQ.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Omniversal plans and career.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Omniversal poster vision.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/OmniversalAether_Rebuild Sync.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Online with Google Fi.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Open Amazon Q in WSL.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Open NFCU Account Process.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/OpenAI API Key Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/OpenAI job posting analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Opening lines feedback.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Operation Blood Echo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Operation Swamp Liberation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Ops Slack Access Granted.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/o/Order cancellation issue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/PDF Parsing Solutions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/PIN Sync and Access.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Packet analysis and impact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Pager numbers and hierarchy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Painful Revelations Recorded.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Pairing HTML files.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Palace of Peace Info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Pantera guitar precision.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Pantera reference explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Parse transcript contents.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Passing it on.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Passport without drivers license.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Password-Free Text File.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Pawn Shop Strategy Swap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Pawn Shops and Motels.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/PayPal and Apple issues.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Pencil Box Design Explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Perfect response expression.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Permission Errors Fix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Persis Double Branch Integration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Personal Finance and Omniversal Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Phone Line Decision Advice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Phone bill hustle advice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Pi Ad Network Expansion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Pin Retrieval Success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Placing OpenAI exports.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Planet Fitness shower amenities.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Pleasant Uber encounter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Pleiades Eclipse and Purpose.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Podcast and SEO description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Popcorn redemption comparison.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Post analysis or summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Precognitive intuition training.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Precognitive mental mapping.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Premonitory awakening analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Price stability and delivery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Primitive insight exchange.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Probability of Meeting People.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Project Instruction Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Project reminder summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Prologue Edit Feedback.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Prologue and Chapter Edits.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Promotional Package Breakdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Property Price Inquiry FL.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/p/Property price search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/q/Quantum entanglement discovery validation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/q/Quiet desperation shared.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/q/Quip at Amazon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/R2 File Bucket Organization.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/RAG Chatbot Not Working.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/RFID fault explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/ROBIN expertise opportunity.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Radiant Greetings Exchange.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Railway Bounties Monetization.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Ready to Send Emails.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Rebirth and transformation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Rebuild Motion to Suppress.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Rebuilding Roots Visionary Path.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Receipt breakdown summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Reclaiming legacy items.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Red Pen Edit Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Rediscovered Knives and Memories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Reframe ML in EverLight OS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Reframing psychic battles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Regaining Digital Access.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Reincarnated2Resist Collaboration Call.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Reinstall macOS Sequoia Help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Reliability and synchronicity.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Remake Replit build.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Remember me recap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Remove name references.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Removing Devices from iCloud.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Renees Hesitation and Insight.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Rent affordability analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Rental prices 33637.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Repo not found.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Report recommendation strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Report review and improvements.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Report unauthorized charges.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Requesting Renee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Residency Affidavit Preparation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Resistance and redirection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Restart macOS without mouse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Restore Page File Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Restoring Discussion Context.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Restoring Discussion Continuity.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Restoring Discussion Thread.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Restoring Previous Discussion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Resurfacing of The Voice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Return to Camp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Reverse Engineering Codex Replica.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Review packet preparation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Ride options and perspective.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Robin Richardson birthday inquiry.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Roger Call Prep.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Roland SR-HD20 Listing Help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Roland Womack Military Summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Room check-in update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Root cause analysis team.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Rossi Recruiting Follow-up.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Router log analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/r/Rumbling Content Strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/SC Landlord-Tenant Act Summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/SD card loss recovery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/SOS Only Phone Fix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/SSA-1099 Explanation 2007.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/SSH Config GitHub Droplet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/SSH Config Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/SSH config fix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/SSH key deployment steps.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/SWPPP components explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Sacred Plant Symbolism.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Sam Mira departure speculation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Sarasota synchrony explained.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Sci-fi rap analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Sears Receipt Analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Secured card credit strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Security alert analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Security frustration resolution.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Security personnel analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Security protocol revision.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Seeing the Path.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Selling watch inquiry.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Sense8 Season 2 finale.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Sense8 and MKULTRA parallels.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Sense8 episode 5 breakdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Server Boot Issue Debug.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Server File Migration Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Server TV Issue Help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Set GH Token.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Shadow Banned Summary Request.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Shamanic Message Formatting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Share Your Passion Tips.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Share iCloud Album Link.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/She Doesnt Listen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Shift strategy and documents.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Shipping address details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Shout-out message draft.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Shoutout for trainer Jose.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Sigh Response.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Site Updates for Cloudflare.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Site content overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Site deployment check.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Slack account activation issue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Smart-Link Astro Integration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Smoothie Flavor Combinations.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Smoothie Ingredient List.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Snack receipt breakdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Snowden podcast explanation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Somatic experience interpretation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Song Collab Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Song analysis Dam That River.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Song analysis breakdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Song lyrics analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Song reflection analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Song vibe discussion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Song-Poem Refinement Request.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Soul-Friendly Income Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Speeding Ticket Arraignment Details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Sphinx Immunity Mapping.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Sphinx build issue fix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/StarCom facility land plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Starter location Mazda 3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Status Update Acknowledged.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Stellar Activation Recalibration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Stewardship Proposal Email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Stop GRID charges.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Stop session resets.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Store File Split.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Store Fix and Launch.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Story introduction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Strategic Legal Warfare.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Struggling to Make Ends Meet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Subscription payment tactics.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Substack Post Formatting Assistance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Substack and Facebook Posts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Substack to TikTok guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Suing OpenAI lawsuit summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Suns betrayal impact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Supabase Backend Setup Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Supreme Court Recognition Strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Surreal Scene Breakdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Suspicious Car Behavior.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Sword Forms Prologue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Swordfish Lyrics Formatting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Swordfish Lyrics Relay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Swordfishing MPC Session.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Symbolic release date analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Synchronicity and Transition.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Synchronicity and Voyagers I.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/s/Systemic design failure.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/sitemap.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/T-shirt design concept.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/TXT File Footers Explained.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Tag number meaning analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Taj Mahal Beer Price.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Targeting on dark web.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Team to Plus Data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Teams Trial Setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Tech Stack for Music AI.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Telepathic connection reflection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Tent Orientation Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Test Drive Checklist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Test Summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/The Artifact comparison.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/The Crying Wolf Truth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Theme Song Integration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Third-party drivers decision.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Time and perspective shift.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Timing and Connection Strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Tithing and Treasure Trails.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Tooth Infection Remedies Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Track Release Strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Training map request.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Travel Update and Plan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Travelers season 3 release.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Trinity of SunSpeaking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Triple R Theory.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Trust Analysis Summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Trust Dispute Legal Strategy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Trusting higher self.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Tsunami update summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Turn off Cloudflare Access.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Turning Cash Digital Options.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/t/Turtle Island Reflection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/URL Replacement Request.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/USB autorun setup Linux.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/USB to Server Upload.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/USPS vs UPS PO Boxes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/Uber rental car prices.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/Ubuntu Kernel Panic Fix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/Ubuntu UI for AetherCore.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/Ultimatum Codex Entry.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/Under attack assistance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/Unfair company policies.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/Unknown Devices on Network.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/Unzip and explore files.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/Upload audio to Substack.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/Uptime Monitoring Suggestions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/u/User frustration analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/v/VALOR GitHub Repo Overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/v/VALOR Plot Development Outline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/v/VALOR Repository Structuring.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/v/VALOR project overview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/v/VIN Country Code Help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/v/Valkyrie vs The Valkyries.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/v/Vendor Ranking Analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/v/Vendor incompetence analysis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/v/Verify past writing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/v/Video Access Request.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/v/Vision Montage Reflection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/v/Voices and Echoes Connection.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/v/Voyagers 2 zip creation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/v/Vscode extensions list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/WGU admissions advice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/WSL Ubuntu installation fix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/WTMA EPP Prep Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/Web3 AI Agent Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/Webby North of Richmond remix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/Website review and ideas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/Website unavailable troubleshooting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/Weekly Routine Planner.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/What is Ashura.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/What is gravity really.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/White bug identification.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/Wifi network troubleshooting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/Womack bucket domain setup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/Work Address Clarification.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/w/World disbelief expression.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/y/You matter keep going.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/z/ZIP File Exploration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/logs/z/Zenkit OpenAI Integration Guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/build-logs.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/build-logs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wrangler.toml" beforeDir="false" afterPath="$PROJECT_DIR$/wrangler.toml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ethanrosswomack&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:HawkEyeTheRapper/mcp-everlight-mirror.git",
+    "accountId": "65e94864-76b9-4b08-8275-d1f730a4f963"
+  }
+}]]></component>
+  <component name="JiraServerManager">
+    <selected>-1</selected>
+    <servers />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="36dcKmVyvVOe04GJNPFnhUXYR2r" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.worker.js.executor": "Run",
+    "Python.build_index.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/dianaswan/aetherintelligence-hawk/mcp/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "bigdataide_conn_settings",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/everlight-context" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.worker.js">
+    <configuration name="worker.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/api/worker.js" working-dir="$PROJECT_DIR$/api">
+      <method v="2" />
+    </configuration>
+    <configuration name="build_index" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mcp-everlight" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/everlight-context" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/everlight-context/build_index.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.worker.js" />
+        <item itemvalue="Python.build_index" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.29346.143" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="72ad46d9-b9a4-4349-859b-139f42c689d8" name="Changes" comment="" />
+      <created>1765339827391</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765339827391</updated>
+      <workItem from="1765339828578" duration="4809000" />
+      <workItem from="1765419350134" duration="1364000" />
+      <workItem from="1766623267686" duration="6602000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

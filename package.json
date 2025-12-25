@@ -1,0 +1,11 @@
+{
+  "name": "mcp-everlight",
+  "version": "1.0.0",
+  "description": "EverLight MCP Context Logs",
+  "scripts": {
+    "build-logs": "node scripts/build-logs.js"
+  },
+  "dependencies": {
+    "marked": "^15.0.4"
+  }
+}
