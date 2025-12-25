@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cloudflare D1 R2 Setup</title>
+<style id="everlight-nav-style">
+      .everlight-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(127,127,127,.3);
+        font-family: system-ui, sans-serif;
+      }
+      .everlight-nav a {
+        text-decoration: none;
+        font-weight: 600;
+        opacity: .9;
+      }
+      .everlight-nav a:hover {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    </style>
+</head>
+<body>
+<nav class="everlight-nav">
+  <a class="prev" href="Clerk Notarization Services.html">⟵ Previous</a>
+  <a class="index" href="index.html">🏠 Index</a>
+  <a class="next" href="Cloudflare Fine-Tune Tutorial.html">Next ⟶</a>
+</nav>
+<hr />
+<p>conversation_id: "682b4bde-3710-8011-960f-66d5355798d1"
+title: "Cloudflare D1 R2 Setup"
+accounts: ["Account2_exports"]
+models: []
+tags: []
+message_count: 14</p>
+<hr />
+<h1 id="cloudflare-d1-r2-setup">Cloudflare D1 R2 Setup</h1>
+<h2 id="system">— system</h2>
+<h2 id="2025-05-19t151852000317z-user">2025-05-19T15:18:52.000317Z — user</h2>
+<h2 id="2025-05-19t151852004817z-user">2025-05-19T15:18:52.004817Z — user</h2>
+<h1 id="hawk-eye-website-deployment-guide-for-reincarnated2resistcom">Hawk Eye Website - Deployment Guide for reincarnated2resist.com</h1>
+<p>This package contains the Hawk Eye website with integrated merchandise store, EverLight analysis, and lyric book offerings. Follow these instructions to deploy the website to your own server.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Node.js (v18 or higher)</li>
+<li>PostgreSQL database</li>
+<li>Ability to set environment variables on your server</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<ol>
+<li>Upload this entire package to your server</li>
+<li>Navigate to the uploaded directory and install dependencies:
+   <code>npm install</code></li>
+<li>
+<p>Create a <code>.env</code> file with the following required variables:
+   <code>DATABASE_URL=postgresql://username:password@hostname:port/database
+   NODE_ENV=production
+   PORT=3000 (or your preferred port)</code></p>
+</li>
+<li>
+<p>Run database migrations:
+   <code>npm run db:push</code></p>
+</li>
+<li>
+<p>Build the application (if not already built):
+   <code>npm run build</code></p>
+</li>
+<li>
+<p>Start the application:
+   <code>npm run start</code></p>
+</li>
+</ol>
+<h2 id="running-behind-nginx-recommended-for-production">Running behind Nginx (Recommended for production)</h2>
+<p>Create an Nginx configuration like this:</p>
+<pre><code class="language-nginx">server {
+    listen 80;
+    server_name reincarnated2resist.com www.reincarnated2resist.com;
+
+    location / {
+        proxy_pass http://localhost:3000;  # Match your PORT from .env
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+</code></pre>
+<p>Then obtain an SSL certificate with Let's Encrypt:</p>
+<pre><code>certbot --nginx -d reincarnated2resist.com -d www.reincarnated2resist.com
+</code></pre>
+<h2 id="data-import">Data Import</h2>
+<p>To import your merchandise data:
+1. Update the URL in <code>server/importStoreData.js</code> if needed
+2. Run the import script:
+   <code>node server/importStoreData.js</code></p>
+<h2 id="running-as-a-service-systemd">Running as a Service (systemd)</h2>
+<p>Create a service file at <code>/etc/systemd/system/hawkeye-website.service</code>:</p>
+<pre><code>[Unit]
+Description=Hawk Eye Website
+After=network.target
+
+[Service]
+WorkingDirectory=/path/to/website/directory
+ExecStart=/usr/bin/npm run start
+Restart=always
+User=youruser
+Environment=NODE_ENV=production
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=DATABASE_URL=postgresql://username:password@hostname:port/database
+Environment=PORT=3000
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>Enable and start the service:</p>
+<pre><code>sudo systemctl enable hawkeye-website
+sudo systemctl start hawkeye-website
+</code></pre>
+<h2 id="monitoring">Monitoring</h2>
+<p>To check the application logs:</p>
+<pre><code>sudo journalctl -u hawkeye-website -f
+</code></pre>
+<h2 id="support">Support</h2>
+<p>For any questions about this deployment, reach out to your development team. </p>
+<p>These are the instructions to use this file export folder inside of our project here can you make sense of it and connect it to the right database d1 and kv or cloudflare bucket and make it work?</p>
+<h2 id="2025-05-19t151854800395z-system">2025-05-19T15:18:54.800395Z — system</h2>
+<h2 id="2025-05-19t151857163791z-assistant">2025-05-19T15:18:57.163791Z — assistant</h2>
+<h2 id="2025-05-19t151906682147z-assistant">2025-05-19T15:19:06.682147Z — assistant</h2>
+<h2 id="2025-05-19t151909649022z-tool">2025-05-19T15:19:09.649022Z — tool</h2>
+<h2 id="2025-05-19t151910878897z-assistant">2025-05-19T15:19:10.878897Z — assistant</h2>
+<h2 id="2025-05-19t151917332009z-tool">2025-05-19T15:19:17.332009Z — tool</h2>
+<h2 id="2025-05-19t151918102397z-assistant">2025-05-19T15:19:18.102397Z — assistant</h2>
+<p>The <code>HawkEyeDigital</code> folder contains a full-stack JavaScript project, including:</p>
+<ul>
+<li><code>server/</code> – likely where your API logic and DB connection live</li>
+<li><code>client/</code> or <code>dist/</code> – front-end assets (possibly built with Vite)</li>
+<li><code>export-package/</code>, <code>extracted_lyrics/</code>, <code>attached_assets/</code> – probably your media, lyric markdowns, etc.</li>
+<li><code>hawk-eye-website-export.tar.gz</code> – could be a backup or secondary export of the site</li>
+<li><code>package.json</code>, <code>drizzle.config.ts</code> – important config for build and database</li>
+<li><code>deploy.sh</code>, <code>deploy-dev.sh</code>, <code>start.sh</code> – automation scripts</li>
+</ul>
+<hr />
+<h3 id="next-steps-to-connect-to-cloudflare-d1-r2-kv">✅ Next Steps to Connect to Cloudflare (D1 + R2 / KV):</h3>
+<p>Let’s break it down into actionable steps for adapting this app to Cloudflare’s ecosystem.</p>
+<hr />
+<h2 id="1-database-cloudflare-d1">🧠 1. Database: Cloudflare D1</h2>
+<p>You’ll need to:</p>
+<ul>
+<li>Replace any <code>PostgreSQL</code> connections in the code with Cloudflare D1 logic.</li>
+<li>D1 uses SQLite under the hood. So we’ll refactor the DB layer, likely in:
+  <code>/server/
+  drizzle.config.ts</code></li>
+<li>Add this to your <code>.env</code> (or Workers config):
+  <code>env
+  D1_DATABASE_ID=&lt;your-d1-db-id&gt;</code></li>
+</ul>
+<hr />
+<h2 id="2-object-storage-cloudflare-r2">🗃️ 2. Object Storage: Cloudflare R2</h2>
+<p>Update references to external file storage in the app:</p>
+<ul>
+<li>Anywhere you're storing images, lyric files, etc., update to use Cloudflare R2.</li>
+<li>Likely changes will go in:</li>
+<li><code>server/importStoreData.js</code></li>
+<li><code>shared/</code> or <code>attached_assets/</code> handling scripts</li>
+<li>Configure your <code>.env</code> like:
+  <code>env
+  R2_BUCKET_NAME=hawkars
+  R2_ACCESS_KEY_ID=...
+  R2_SECRET_ACCESS_KEY=...
+  R2_ENDPOINT=https://&lt;region&gt;.r2.cloudflarestorage.com</code></li>
+</ul>
+<hr />
+<h2 id="3-key-value-storage-cloudflare-kv">🔑 3. Key-Value Storage: Cloudflare KV</h2>
+<p>Use KV for fast-access data (e.g., caching lyrics, user settings, metadata). Setup:</p>
+<ul>
+<li><code>KV_NAMESPACE_ID=&lt;your-kv-id&gt;</code> in <code>.env</code></li>
+<li>Refactor read-heavy endpoints to pull from KV for performance.</li>
+</ul>
+<hr />
+<h2 id="want-me-to-generate-the-exact-replacement-files">🚀 Want me to generate the exact replacement files?</h2>
+<p>I can begin scaffolding:</p>
+<ol>
+<li>A new <code>drizzle.config.ts</code> + DB wrapper for D1  </li>
+<li>An R2-compatible <code>uploadMedia.ts</code> + importer  </li>
+<li><code>worker.config.mjs</code> for full Worker deployment  </li>
+<li>Scripts to mirror the current <code>deploy.sh</code> for CF</li>
+</ol>
+<p>Let me know which part you'd like to focus on <strong>first</strong>:
+- 🔄 D1 DB replacement
+- 🪣 R2 file storage integration
+- ⚡ KV key-value store logic
+- 🧩 Cloudflare Worker deployment base</p>
+<p>Or — I can create a unified <code>Cloudflare-Conversion.md</code> with instructions.</p>
+<h2 id="2025-05-19t152014592679z-user">2025-05-19T15:20:14.592679Z — user</h2>
+<h2 id="2025-05-19t152016659779z-assistant">2025-05-19T15:20:16.659779Z — assistant</h2>
+<h2 id="2025-05-19t152029789456z-tool">2025-05-19T15:20:29.789456Z — tool</h2>
+<h2 id="2025-05-19t152030539697z-assistant">2025-05-19T15:20:30.539697Z — assistant</h2>
+<p>The <code>hawk-eye-website-export.tar.gz</code> archive has been successfully extracted and contains the core production build of your site. Here's what’s inside:</p>
+<ul>
+<li><code>dist/</code> — The compiled front-end (likely via Vite or similar)</li>
+<li><code>server/</code> — The backend logic, routes, and database handlers</li>
+<li><code>shared/</code> — Likely shared types, utility functions, or constants</li>
+<li><code>drizzle.config.ts</code> — Your database ORM config (probably uses Drizzle ORM)</li>
+<li><code>start-server.sh</code> — Startup script for production</li>
+<li><code>package.json</code> / <code>package-lock.json</code> — Dependency and script definitions</li>
+<li><code>README.md</code> — Likely contains additional setup instructions</li>
+</ul>
+<hr />
+<h3 id="whats-next">✅ What's Next?</h3>
+<p>Since this looks like a ready-to-deploy production bundle, we can now:</p>
+<ol>
+<li><strong>Inject Cloudflare D1 + R2 credentials and logic</strong> into:</li>
+<li><code>drizzle.config.ts</code> → swap PostgreSQL for D1</li>
+<li><code>server/</code> routes → refactor any <code>pg</code> client code</li>
+<li>
+<p><code>shared/</code> logic if it deals with storage access</p>
+</li>
+<li>
+<p><strong>Create a Cloudflare Worker wrapper</strong> (optional):</p>
+</li>
+<li>
+<p>Wrap the Express-style backend in a Worker-compatible layer (e.g., using <code>Hono</code> or <code>itty-router</code>)</p>
+</li>
+<li>
+<p><strong>Replace file upload/download endpoints with R2 logic</strong><br />
+   (example: image storage, lyric books, etc.)</p>
+</li>
+</ol>
+<hr />
+<p>Would you like me to:</p>
+<ul>
+<li>🔄 Refactor <code>drizzle.config.ts</code> for Cloudflare D1?</li>
+<li>🪣 Add sample R2 integration for file uploads/downloads?</li>
+<li>🧪 Set up a dev deployment script using <code>wrangler.toml</code>?</li>
+<li>📄 Write a <code>Cloudflare-Migration.md</code> document summarizing the new flow?</li>
+</ul>
+<p>Let me know where you want to begin.</p>
+</body>
+</html>

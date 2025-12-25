@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Internet connection troubleshooting</title>
+<style id="everlight-nav-style">
+      .everlight-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(127,127,127,.3);
+        font-family: system-ui, sans-serif;
+      }
+      .everlight-nav a {
+        text-decoration: none;
+        font-weight: 600;
+        opacity: .9;
+      }
+      .everlight-nav a:hover {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    </style>
+</head>
+<body>
+<nav class="everlight-nav">
+  <a class="prev" href="Internal transfer strategy.html">⟵ Previous</a>
+  <a class="index" href="index.html">🏠 Index</a>
+  <a class="next" href="Invalid Custom Property Error.html">Next ⟶</a>
+</nav>
+<hr />
+<p>conversation_id: "68428cd1-37b0-8011-93da-bed536a7c372"
+title: "Internet connection troubleshooting"
+accounts: ["Account2_exports"]
+models: []
+tags: []
+message_count: 13</p>
+<hr />
+<h1 id="internet-connection-troubleshooting">Internet connection troubleshooting</h1>
+<h2 id="user">— user</h2>
+<h2 id="system">— system</h2>
+<h2 id="2025-06-06t063808957063z-user">2025-06-06T06:38:08.957063Z — user</h2>
+<p>I’ve lost all internet except on my phone even plugged straight in nothing connects</p>
+<h2 id="2025-06-06t063810324920z-assistant">2025-06-06T06:38:10.324920Z — assistant</h2>
+<p>Let’s troubleshoot step by step. Since your phone still has internet, but everything else (even plugged in via Ethernet) does <strong>not</strong>, we need to isolate the issue—whether it’s:</p>
+<ul>
+<li><strong>Router-related</strong></li>
+<li><strong>ISP-related</strong></li>
+<li><strong>Local network configuration</strong></li>
+<li><strong>Device-related</strong></li>
+</ul>
+<hr />
+<h3 id="step-by-step-troubleshooting">⚙️ Step-by-Step Troubleshooting</h3>
+<h4 id="step-1-check-the-router-modem"><strong>Step 1: Check the Router &amp; Modem</strong></h4>
+<ul>
+<li><strong>Are the router/modem lights normal?</strong> (Power, Internet, LAN, etc.)</li>
+<li>Try <strong>power cycling</strong> the router and modem:</li>
+<li>Unplug both for 60 seconds.</li>
+<li>Plug in modem first, wait 1–2 mins.</li>
+<li>Plug in router second (if separate).</li>
+</ul>
+<blockquote>
+<p>If you're using a <strong>combo unit (modem+router in one)</strong>, just restart it.</p>
+</blockquote>
+<hr />
+<h4 id="step-2-test-ethernet-from-another-device"><strong>Step 2: Test Ethernet from Another Device</strong></h4>
+<ul>
+<li>Plug another <strong>laptop or PC directly into the router/modem</strong> via Ethernet and see if it connects.</li>
+<li>If <strong>none work</strong>, issue is <strong>network-wide</strong> (likely modem/router/ISP).</li>
+</ul>
+<hr />
+<h4 id="step-3-check-ip-dns-settings-on-main-device"><strong>Step 3: Check IP &amp; DNS Settings (on main device)</strong></h4>
+<p><strong>For macOS/Linux:</strong></p>
+<pre><code class="language-bash">ifconfig
+ping 8.8.8.8
+ping google.com
+</code></pre>
+<p><strong>For Windows (CMD):</strong></p>
+<pre><code class="language-cmd">ipconfig
+ping 8.8.8.8
+ping google.com
+</code></pre>
+<p>If <code>ping 8.8.8.8</code> works but <code>google.com</code> doesn’t: DNS issue.</p>
+<hr />
+<h4 id="step-4-log-in-to-router-from-your-phone"><strong>Step 4: Log in to Router from Your Phone</strong></h4>
+<p>Since your phone still has Wi-Fi:</p>
+<ul>
+<li>Go to <code>192.168.0.1</code> or <code>192.168.1.1</code> in your phone browser.</li>
+<li>Log in to your router admin panel.</li>
+<li>Check:</li>
+<li><strong>WAN/Internet status</strong> (does it show connected or not?)</li>
+<li><strong>Any MAC address filtering / firewall rules</strong> enabled?</li>
+<li>DHCP range — is it assigning IPs?</li>
+</ul>
+<hr />
+<h4 id="step-5-isp-outage-or-block"><strong>Step 5: ISP Outage or Block?</strong></h4>
+<ul>
+<li>Try visiting your ISP’s status page from your phone.</li>
+<li>Alternatively, use mobile data to check <a href="https://downdetector.com">https://downdetector.com</a>.</li>
+</ul>
+<hr />
+<h4 id="step-6-restore-network-defaults-if-needed"><strong>Step 6: Restore Network Defaults (if needed)</strong></h4>
+<p>On router panel:
+- You can try a <strong>“Restore Factory Defaults”</strong> if you suspect settings got messed up.
+  - You’ll need to reconfigure Wi-Fi name/password.</p>
+<hr />
+<h4 id="optional-step-use-phone-as-emergency-hotspot">Optional Step: Use Phone as Emergency Hotspot</h4>
+<p>Until you fix the wired/wireless LAN:
+- <strong>Enable hotspot</strong> on your phone and connect your PC/devices to that.</p>
+<hr />
+<p>Let me know:
+1. The <strong>make/model</strong> of your router/modem
+2. If you’re using <strong>static IPs</strong>, VLANs, or custom DNS settings
+3. Any recent config or update changes (e.g. firmware update, server config, etc.)</p>
+<p>I can walk you through restoring local connectivity while keeping your AetherCore and internal services in working order too.</p>
+<h2 id="2025-06-06t063820630638z-assistant">2025-06-06T06:38:20.630638Z — assistant</h2>
+<h2 id="2025-06-06t064015098365z-user">2025-06-06T06:40:15.098365Z — user</h2>
+<p>And then I type in the password and it doesn’t work </p>
+<h2 id="2025-06-06t064015431045z-assistant">2025-06-06T06:40:15.431045Z — assistant</h2>
+<p>Got it — if you're typing in the <strong>router’s admin password</strong> (via something like <code>192.168.0.1</code>) and it's not working, here’s what could be going on — and how to solve it fast:</p>
+<hr />
+<h3 id="first-identify-the-password-type-youre-entering">🔐 First, Identify the Password Type You're Entering</h3>
+<p>Are you trying to:
+1. <strong>Log into the router's admin panel?</strong> (to configure settings)
+2. <strong>Join the Wi-Fi from a device?</strong>
+3. <strong>Access the network from the device via Ethernet?</strong></p>
+<p>You said earlier you're plugged in, so I’m assuming it’s <strong>#1 — router admin login.</strong></p>
+<hr />
+<h3 id="if-router-password-doesnt-work">⚠️ If Router Password Doesn’t Work</h3>
+<h4 id="1-try-the-default-credentials">🔁 1. <strong>Try the Default Credentials</strong></h4>
+<p>Check the label on the router itself — or try common defaults:
+- Username: <code>admin</code>
+- Password: <code>admin</code> or <code>password</code> or blank</p>
+<p>Also try:
+- <code>user / user</code>
+- <code>admin / 1234</code></p>
+<p>Still no luck?</p>
+<hr />
+<h4 id="2-reset-the-router">🧼 2. <strong>Reset the Router</strong></h4>
+<p>If you <em>don’t</em> know or can’t recover the admin password:</p>
+<p><strong>Hard Reset:</strong>
+1. Find the small <strong>reset pinhole</strong> on the back of your router.
+2. Use a paperclip to hold it down for <strong>15–30 seconds</strong> until lights blink.
+3. Wait a couple minutes — the router will restart with <strong>factory settings</strong>.
+4. Reconnect via Wi-Fi or Ethernet, using default credentials again.</p>
+<p>This wipes any weird config or blocks and lets you start clean.</p>
+<hr />
+<h4 id="3-reconfigure-after-reset">📶 3. <strong>Reconfigure After Reset</strong></h4>
+<p>You’ll need to:
+- Set Wi-Fi name and password again
+- (Optional) Restore any special settings (port forwarding, static IPs, etc.)
+- Set a <em>new</em> admin password you’ll remember</p>
+<hr />
+<h3 id="extra-notes">🛠 Extra Notes</h3>
+<ul>
+<li>If this was a <strong>modem/router combo from ISP</strong>, it may have an ISP-specific login. In that case, check the sticker or call their support line — some lock the admin panel.</li>
+<li>Some routers (Netgear, TP-Link, ASUS) have <strong>apps</strong> that let you log in via Bluetooth or mobile data to reset or reconfigure without needing a browser.</li>
+</ul>
+<hr />
+<p>Let me know:
+- Router brand and model
+- Whether this is a home setup or mesh system
+- If the internet light is blinking red, orange, or out</p>
+<p>I’ll tailor exact steps to fix it and get you back online.</p>
+<h2 id="2025-06-06t064201873671z-user">2025-06-06T06:42:01.873671Z — user</h2>
+<p>{"content_type": "image_asset_pointer", "asset_pointer": "file-service://file-AtQzjyeUev93f7eHtBxQSY", "size_bytes": 2825902, "width": 1152, "height": 1536, "fovea": null, "metadata": {"dalle": null, "gizmo": null, "generation": null, "container_pixel_height": null, "container_pixel_width": null, "emu_omit_glimpse_image": null, "emu_patches_override": null, "lpe_keep_patch_ijhw": null, "sanitized": true, "asset_pointer_link": null, "watermarked_asset_pointer": null}}</p>
+<h2 id="2025-06-06t064203756593z-assistant">2025-06-06T06:42:03.756593Z — assistant</h2>
+<p>Thanks for the photo — here’s what we can tell from the screen:</p>
+<hr />
+<h3 id="wireless-network-connection-failed">❌ Wireless Network Connection Failed</h3>
+<ul>
+<li><strong>Network:</strong> <code>TP-Link_278C</code></li>
+<li><strong>MAC Address is visible</strong>, but:</li>
+<li><strong>IP Address:</strong> <code>0.0.0.0</code></li>
+<li><strong>Subnet Mask:</strong> <code>0.0.0.0</code></li>
+<li><strong>Gateway:</strong> <code>0.0.0.0</code></li>
+<li><strong>DNS Server:</strong> <code>0.0.0.0</code></li>
+</ul>
+<p>This means:
+- Your device can <em>see</em> the network, but <strong>isn’t getting an IP</strong>.
+- The router is <strong>either not assigning DHCP</strong> or rejecting the connection (bad password, MAC filter, etc).</p>
+<hr />
+<h2 id="heres-what-to-do-next">🧰 Here's What to Do Next</h2>
+<h3 id="1-double-check-the-password">✅ 1. <strong>Double-Check the Password</strong></h3>
+<ul>
+<li>Make sure you're typing the <strong>correct case-sensitive Wi-Fi password</strong> for <code>TP-Link_278C</code>. If you’re not sure, log in from your phone or another working device and confirm the network password.</li>
+</ul>
+<hr />
+<h3 id="2-restart-your-router">🔧 2. <strong>Restart Your Router</strong></h3>
+<p>Even if it was working earlier, something may have glitched.</p>
+<ul>
+<li>Unplug the router from power for 30 seconds, then plug back in.</li>
+<li>Wait 2–3 minutes for all lights to stabilize.</li>
+</ul>
+<hr />
+<h3 id="3-check-router-dhcp-settings">💡 3. <strong>Check Router DHCP Settings</strong></h3>
+<p>If your phone can still connect to <code>TP-Link_278C</code>, log into the router:</p>
+<ol>
+<li>From your phone browser, go to:</li>
+<li>
+<p><code>http://192.168.0.1</code> or <code>http://192.168.1.1</code></p>
+</li>
+<li>
+<p>Use common logins:</p>
+</li>
+<li>Username: <code>admin</code></li>
+<li>
+<p>Password: <code>admin</code> or check the label underneath</p>
+</li>
+<li>
+<p>Look for:</p>
+</li>
+<li><strong>DHCP Server</strong>: Should be <strong>enabled</strong></li>
+<li>Check <strong>MAC filtering</strong> is <strong>off</strong></li>
+<li>Look at <strong>connected clients</strong> — does your TV or PC show up?</li>
+</ol>
+<hr />
+<h3 id="4-forget-and-reconnect-to-wi-fi">🧼 4. <strong>Forget and Reconnect to Wi-Fi</strong></h3>
+<p>On the device that shows this error:
+- Go to network settings → <strong>Forget the TP-Link network</strong>
+- Reconnect fresh, entering the password again</p>
+<hr />
+<h3 id="5-optional-set-ip-manually">🛠 5. (Optional) Set IP Manually</h3>
+<p>If DHCP is failing, try this quick test:
+- Choose <strong>IP Settings</strong>
+- Enter:
+  - <strong>IP Address</strong>: <code>192.168.0.150</code>
+  - <strong>Subnet Mask</strong>: <code>255.255.255.0</code>
+  - <strong>Gateway</strong>: <code>192.168.0.1</code>
+  - <strong>DNS Server</strong>: <code>8.8.8.8</code></p>
+<blockquote>
+<p>Only do this as a test. If it connects, DHCP is likely broken on the router.</p>
+</blockquote>
+<hr />
+<h3 id="if-all-else-fails">📞 If All Else Fails</h3>
+<p>Let me know:
+- The <strong>exact TP-Link model</strong>
+- Whether your <strong>phone is still online through that Wi-Fi</strong>
+- And if <strong>any other device is online besides your phone</strong></p>
+<p>I’ll walk you through resetting the router and getting full control back.</p>
+<h2 id="2025-06-06t064234711104z-user">2025-06-06T06:42:34.711104Z — user</h2>
+<p>It is the right password it was working g </p>
+<h2 id="2025-06-06t064235155551z-assistant">2025-06-06T06:42:35.155551Z — assistant</h2>
+<p>Perfect — thanks for confirming. If it <strong>was working before with the same password</strong>, but now <strong>suddenly fails to assign IP addresses</strong>, here’s what that <em>almost certainly</em> means:</p>
+<hr />
+<h2 id="your-routers-dhcp-server-has-crashed-or-been-disabled">⚠️ Your Router's DHCP Server Has Crashed or Been Disabled</h2>
+<p>This is why:
+- Devices can <strong>see</strong> the Wi-Fi (like the screen you showed),
+- But they <strong>get no IP address</strong> (<code>0.0.0.0</code>) = router isn’t assigning them.</p>
+<hr />
+<h2 id="fix-it-fast-heres-what-to-do-right-now">✅ Fix It Fast — Here's What to Do Right Now</h2>
+<h3 id="step-1-power-cycle-the-router-and-modem">🔁 Step 1: <strong>Power Cycle the Router and Modem</strong></h3>
+<blockquote>
+<p>Even if you've done it already — do it <em>again in this exact order</em>:</p>
+</blockquote>
+<ol>
+<li><strong>Unplug both modem and router</strong></li>
+<li>Wait 60 seconds</li>
+<li><strong>Plug in the modem first</strong></li>
+<li>Wait 2 full minutes until <em>all lights stabilize</em></li>
+<li><strong>Plug in the router next</strong></li>
+<li>Wait another 2 minutes</li>
+</ol>
+<p>Then try to connect again from one of the devices that was failing (TV, PC, etc.).</p>
+<hr />
+<h3 id="step-2-if-that-fails-log-in-via-phone">🛠️ Step 2: <strong>If That Fails — Log in via Phone</strong></h3>
+<p>Since your phone <strong>still works</strong>, it likely got a DHCP lease <em>before the failure</em>.</p>
+<h4 id="from-your-phone">From your phone:</h4>
+<ol>
+<li>Go to <code>http://192.168.0.1</code> or <code>http://192.168.1.1</code> in the browser</li>
+<li>Login:</li>
+<li><strong>Username:</strong> <code>admin</code></li>
+<li><strong>Password:</strong> usually <code>admin</code>, <code>password</code>, or whatever you set (check router sticker)</li>
+</ol>
+<h4 id="once-inside">Once inside:</h4>
+<ul>
+<li>Go to <strong>DHCP settings</strong></li>
+<li>Make sure <strong>DHCP Server is enabled</strong></li>
+<li>Click <strong>Apply / Save / Reboot</strong> from inside the router dashboard</li>
+</ul>
+<hr />
+<h3 id="step-3-if-needed-factory-reset-the-router">🧼 Step 3: If Needed — Factory Reset the Router</h3>
+<p>If logging in doesn’t work and nothing is working anymore:</p>
+<ol>
+<li>Find the <strong>RESET pinhole</strong> on the back of the TP-Link</li>
+<li>Use a paperclip to hold it <strong>10–15 seconds</strong></li>
+<li>Lights should flash — then release</li>
+<li>Reconnect to the default network name and reconfigure</li>
+</ol>
+<p>This will fully restore DHCP functionality and network access.</p>
+<hr />
+<h2 id="why-this-happened">🧠 Why This Happened</h2>
+<p>This can happen due to:
+- Overheating
+- Power surge
+- Buggy firmware or full DHCP lease table
+- Manual misconfiguration (rare, unless you were tinkering)</p>
+<hr />
+<p>Want me to walk you through the web panel step-by-step? Just let me know what TP-Link model you have and what IP you see in your phone’s Wi-Fi settings. We’ll get it fully reset and back to operational state ASAP.</p>
+<h2 id="2025-06-06t064553340307z-user">2025-06-06T06:45:53.340307Z — user</h2>
+<p>What is a full dchp</p>
+<h2 id="2025-06-06t064553920994z-assistant">2025-06-06T06:45:53.920994Z — assistant</h2>
+<p>Great question. Here's a clear breakdown:</p>
+<hr />
+<h2 id="what-is-a-full-dhcp-table">📦 What Is a <strong>Full DHCP Table</strong>?</h2>
+<p>The <strong>DHCP (Dynamic Host Configuration Protocol)</strong> table is the list your <strong>router keeps</strong> of all devices it has handed out IP addresses to.</p>
+<h3 id="think-of-it-like">🧠 Think of it like:</h3>
+<blockquote>
+<p>A hotel giving out room keys (IP addresses). Once all rooms are full, no more guests (devices) can check in.</p>
+</blockquote>
+<p>So if the <strong>DHCP pool is full</strong>, then:
+- New devices trying to join your Wi-Fi (like your TV or PC) <strong>won’t get an IP address</strong>
+- You’ll see <code>0.0.0.0</code> for IP, gateway, and DNS — just like in your screenshot</p>
+<hr />
+<h2 id="when-does-it-happen">⚠️ When Does It Happen?</h2>
+<p>Usually when:
+- The router is set to allow only <strong>10–20 IPs</strong>, and they're all taken
+- Devices reconnect often but don’t release their old leases
+- The router <strong>crashes or bugs out</strong> and doesn’t clear expired leases</p>
+<hr />
+<h2 id="how-to-fix-a-full-dhcp-table">🔧 How to Fix a Full DHCP Table</h2>
+<h3 id="option-1-reboot-the-router">✅ Option 1: <strong>Reboot the Router</strong></h3>
+<ul>
+<li>This clears the lease table and restarts DHCP fresh.</li>
+</ul>
+<h3 id="option-2-extend-the-dhcp-range">✅ Option 2: <strong>Extend the DHCP Range</strong></h3>
+<p>Log into the router and:
+1. Find <strong>DHCP Settings</strong>
+2. Look for something like:
+   <code>Start IP: 192.168.0.100
+   End IP:   192.168.0.199</code>
+3. Increase the end IP — e.g., change to <code>192.168.0.254</code> to allow more devices</p>
+<hr />
+<h2 id="summary">📌 Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DHCP</strong></td>
+<td>A service on your router that gives devices IP addresses</td>
+</tr>
+<tr>
+<td><strong>DHCP Lease</strong></td>
+<td>The temporary IP a device gets from your router</td>
+</tr>
+<tr>
+<td><strong>DHCP Table</strong></td>
+<td>The list of who got which IP and when</td>
+</tr>
+<tr>
+<td><strong>Full DHCP</strong></td>
+<td>All IPs have been assigned — no room left</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Let me know if you want help logging into the router to check or expand the DHCP range. If you’re stuck outside the router still, we can reset it and get it fully under your control again.</p>
+</body>
+</html>

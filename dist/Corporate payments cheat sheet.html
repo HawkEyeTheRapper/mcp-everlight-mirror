@@ -1,0 +1,1047 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Corporate payments cheat sheet</title>
+<style id="everlight-nav-style">
+      .everlight-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(127,127,127,.3);
+        font-family: system-ui, sans-serif;
+      }
+      .everlight-nav a {
+        text-decoration: none;
+        font-weight: 600;
+        opacity: .9;
+      }
+      .everlight-nav a:hover {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    </style>
+</head>
+<body>
+<nav class="everlight-nav">
+  <a class="prev" href="Core learning paths list.html">⟵ Previous</a>
+  <a class="index" href="index.html">🏠 Index</a>
+  <a class="next" href="Corporate tech competition.html">Next ⟶</a>
+</nav>
+<hr />
+<p>conversation_id: "68a944bd-d61c-832d-885d-1ba65d9c5325"
+title: "Corporate payments cheat sheet"
+accounts: ["Account1_exports"]
+models: []
+tags: []
+message_count: 17</p>
+<hr />
+<h1 id="corporate-payments-cheat-sheet">Corporate payments cheat sheet</h1>
+<h2 id="user">— user</h2>
+<h2 id="system">— system</h2>
+<h2 id="system_1">— system</h2>
+<h2 id="2025-08-23t043405460000z-user">2025-08-23T04:34:05.460000Z — user</h2>
+<h2 id="2025-08-23t043406919568z-assistant">2025-08-23T04:34:06.919568Z — assistant</h2>
+<p>Got your “Corporate Payments – Global” deck. Want a quick, no-nonsense cheat sheet you can use while you work? Here’s a one-pager you can keep open.</p>
+<h1 id="corporate-procure-to-pay-non-retail-tldr">Corporate Procure-to-Pay (non-Retail) — TL;DR</h1>
+<h2 id="what-counts">What counts</h2>
+<ul>
+<li>All <strong>non-inventory</strong> goods &amp; services Amazon uses internally (Ops, Legal/HR/IT/Marketing, utilities, CAPEX, data center services, taxes/fees/settlements). Not Retail inventory or Marketplace. fileciteturn0file0</li>
+</ul>
+<h2 id="who-does-what-fast-map">Who does what (fast map)</h2>
+<ul>
+<li><strong>PO Owner</strong>: end-to-end owner; the bridge to vendor; confirms receipt/approves services.  </li>
+<li><strong>Vendor Manager / Vendor Maintenance</strong>: get the vendor created/maintained in Payee Central.  </li>
+<li><strong>FinOps Corp AP</strong>: processes invoices/payments per rules.  </li>
+<li><strong>Support (Tax, Accounting, Legal, etc.)</strong>: governance; help on edge cases. fileciteturn0file0</li>
+</ul>
+<h2 id="golden-rules-stp-first">Golden rules (S&amp;TP first!)</h2>
+<p>1) <strong>Follow S&amp;TP</strong> approvals/controllership <strong>before</strong> any commitment.<br />
+2) <strong>Onboard the vendor</strong> in <strong>Payee Central</strong> (separate onboardings if vendor sells <strong>goods &amp; services</strong>).<br />
+3) <strong>Issue a PO</strong> (Coupa for corporate; SC.OS/Cloudforge for data centers).<br />
+4) <strong>Vendor invoice must include the PO number</strong> and match the PO.<br />
+5) <strong>Goods = 3-way match (receipt required)</strong>; <strong>Services = 2-way &amp; approval workflow</strong>.<br />
+6) FinOps pays <strong>after</strong> receipt/approval; otherwise they open a TT describing the fix. fileciteturn0file0</p>
+<h2 id="quick-workflows">Quick workflows</h2>
+<h3 id="a-standard-po-flow">A) Standard PO flow</h3>
+<p>Contracting → Vendor onboard (Payee Central) → Create PO (correct supplier site, GL, org, location, type) → Vendor invoices <strong>with PO #/line</strong> → AP validates →<br />
+- <strong>Goods</strong>: you post <strong>receipt</strong> in Coupa/Cloudforge → Pay<br />
+- <strong>Services</strong>: you <strong>approve</strong> Oracle workflow email → Pay. fileciteturn0file0</p>
+<h3 id="b-blanketrecurring">B) Blanket/recurring</h3>
+<p>Use <strong>Blanket PO</strong> for multi-month services/consumption; single PO for one-offs. Keep funds/lines aligned to expected billing cadence. fileciteturn0file0</p>
+<h2 id="set-up-essentials-when-creating-the-po">Set-up essentials (when creating the PO)</h2>
+<ul>
+<li><strong>Supplier number/site matches the vendor’s tax ID/branch.</strong>  </li>
+<li><strong>Content group &amp; GL string</strong> (company code, cost center, account).  </li>
+<li><strong>Assets</strong> → account 16999; <strong>Spare parts</strong> → 14808; <strong>Expenses</strong> → 6xxxx.  </li>
+<li><strong>PO type</strong>: Goods = quantity/3-way; Services/Freight = amount/2-way.  </li>
+<li><strong>Separate POs</strong> for <strong>fixed assets vs consumables</strong>. fileciteturn0file0</li>
+</ul>
+<h2 id="the-five-most-common-blockers-and-how-to-clear-them">The five most common blockers (and how to clear them)</h2>
+<p>1) <strong>QTY REC (Quantity Receipt) hold</strong> (Coupa): you forgot to receive. → <strong>Find PO → Truck icon → receive</strong> correct qty/date. (Cloudforge: follow “Receiving POs” wiki.) fileciteturn0file0<br />
+2) <strong>PO Overbilled / Max Ship Amount / Qty Ord</strong>: invoice &gt; PO funds/qty. → <strong>Add funds/lines</strong> in Coupa (Request change → Add line/update), then Holds team re-matches. fileciteturn0file0<br />
+3) <strong>Missing approval (Services)</strong>: approve the Oracle workflow email (<strong>ofa-wf-prod@amazon.com</strong>). fileciteturn0file0<br />
+4) <strong>Incorrect GL/location/supplier site</strong>: fix the PO <strong>or</strong> have vendor <strong>cancel</strong> and re-issue invoice; <strong>attach proof of cancellation</strong> in the TT. <strong>Never</strong> receive/approve if details don’t match. fileciteturn0file0<br />
+5) <strong>Vendor not registered</strong>: get them <strong>onboarded</strong> (Payee Central). Separate invites for <strong>goods</strong> and <strong>services</strong> if both. fileciteturn0file0</p>
+<h2 id="do-dont-rapid-fire">Do / Don’t (rapid fire)</h2>
+<ul>
+<li>✅ Validate <strong>gross</strong> price (incl. taxes/fees) before setting PO funds.  </li>
+<li>✅ Keep vendor aligned on the <strong>exact PO # and line</strong> they must bill.  </li>
+<li>✅ Use <strong>separate POs</strong> by product type (asset vs expense) to avoid GL defects.  </li>
+<li>❌ Don’t confirm receipt or approve services if <strong>anything doesn’t match</strong>—request vendor <strong>cancellation</strong> within local deadlines and attach proof.  </li>
+<li>❌ Don’t forget <strong>services</strong> need <strong>approval</strong>; goods need <strong>receipts</strong>—no exceptions. fileciteturn0file0</li>
+</ul>
+<h2 id="critical-vendors-know-when-to-escalate">Critical vendors (know when to escalate)</h2>
+<p>Utilities, telecom, rent/colo, employee benefits—anything where late/non-payment could <strong>halt buildings/ops, harm reputation, or disrupt sites/fulfillment</strong>. Government critical vendors may need <strong>NSQ</strong> flow with supporting docs. fileciteturn0file0</p>
+<h2 id="coupa-change-ops-youre-allowed-to-make">Coupa change ops you’re allowed to make</h2>
+<p>Description (non-catalog), coding (not company code), attachments, match type, need-by date, unit price (amount-based), qty (qty-based), payment terms, close/re-open, ownership transfer—each has a tutorial. fileciteturn0file0</p>
+<h2 id="special-cases-youll-see">Special cases you’ll see</h2>
+<ul>
+<li><strong>Import of services</strong>: align PO currency to <strong>invoice currency</strong>; confirm withholding/tax rules before placing PO.  </li>
+<li><strong>PAS / Pre-approved spend</strong> and exceptions: follow policy; some cases are PO-exempt, but GL reference still required. fileciteturn0file0</li>
+</ul>
+<hr />
+<p>If you want, I can turn this into a printable mini-poster or a step-by-step checklist for your exact role (e.g., PO Owner on Ops services).</p>
+<h2 id="2025-08-23t043407148719z-system">2025-08-23T04:34:07.148719Z — system</h2>
+<h2 id="2025-08-23t043407153282z-system">2025-08-23T04:34:07.153282Z — system</h2>
+<h2 id="2025-08-23t043407155700z-tool">2025-08-23T04:34:07.155700Z — tool</h2>
+<h2 id="2025-08-23t043407166283z-tool">2025-08-23T04:34:07.166283Z — tool</h2>
+<p>Make sure to include fileciteturn0file0 in your response to cite this file. </p>
+<p>Confidencial</p>
+<p>Amazon Corporate Procure-to-Pay</p>
+<p>Agenda</p>
+<p>Confidential</p>
+<p>• What’s included in Corporate Payments
+• S&amp;TP
+• Who does What
+• Complex Regulatory environment
+• Vendor Onboarding
+• Purchase Order
+• Vendor Invoicing
+• Confirmation, approval and payment
+• Appendix</p>
+<p>Most Common Issues and How to Solve
+Transaction types
+Useful Links
+Critical Vendors
+Other Vendor Onboard Methods and Importation of Services</p>
+<p>Executive Summary…. Things you must remember </p>
+<p>Confidential</p>
+<p>• S&amp;TP - Follow Amazon´s policy regarding contracting, approvals and controllership. </p>
+<p>• For Complex Regulatory environments - Pay attention to details (ex.:  tax IDs for vendor and Amazon, invoice cancellation 
+rules)</p>
+<p>• Vendor Onboarding – All vendors onboarded is the 1st step. Required by country (for specific tax interview), with separated 
+onboards for goods and services</p>
+<p>• Purchase Order – Ensure the correct vendor code, correct Amazon taxID, description, amount and quantity with taxes, 1 PO 
+per product type or services</p>
+<p>• Vendor Invoicing – There are countries where vendor is required to email invoice pdf to Amazon and invoice must have PO 
+number.  The invoice must match the PO. Check with your local AP/BP partner for country specific rules</p>
+<p>• Confirmation, approval and payment - Receipt (Goods) or Approval (Services) is required. If all checks passed, FinOps will 
+schedule payment. If not, FinOps opens a ticket with actions/fixes required by vendor or by PO requester.</p>
+<p>• Most Common Issues and How to Solve – Summary guide on how to respond to FinOps TTs (slides 29-37)</p>
+<p>Confidential</p>
+<p>If you mean RETAIL Purchases (inventory that will be sold by amazon.com), this is NOT
+your place!</p>
+<p>If you mean CORPORATE Purchases (Goods or Services that will be used internally) OR 
+Datacenter purchases... This is the right place!</p>
+<p>NEED TO BUY ON BEHALF OF AMAZON BRAZIL?</p>
+<p>What is included in Corporate Payments</p>
+<p>Confidential</p>
+<p>All goods and services for Amazon as final user </p>
+<p>Includes:</p>
+<p>• All non-inventory items used internally (such as office and shipping supplies)</p>
+<p>• Services covering Fulfillment Centers, Transportation and other services related to Operations</p>
+<p>• Services for diverse Corporate purposes, such as Legal, Marketing, HR and IT advisors, intermediary and 
+infrastructure services</p>
+<p>• Taxes, bank charges, fines &amp; penalties, legal settlements</p>
+<p>• Essencial site services as water, energy, telecom (Critical Vendors)</p>
+<p>• Fixed assets (CAPEX)</p>
+<p>• Services related to datacenters, digital, music and video (content creators, producers, partners)</p>
+<p>Does NOT include:</p>
+<p>• Inventory items that will be sold by Amazon</p>
+<p>• Marketplace purchases (3P)</p>
+<p>Every Transaction has ONE PURPOSE and SEVERAL IMPACTS</p>
+<p>Confidential</p>
+<p>THE PURPOSE</p>
+<p>• A service to be provided for our 
+Business</p>
+<p>• A maintenance item</p>
+<p>• An input for our Operations</p>
+<p>• An asset for our Launches</p>
+<p>• A critical service</p>
+<p>reputation</p>
+<p>taxes</p>
+<p>expansions</p>
+<p>operations</p>
+<p>suppliers quality financials</p>
+<p>business 
+efficiency</p>
+<p>compliance</p>
+<p>sales</p>
+<p>accounting</p>
+<p>supply chain</p>
+<p>withholding 
+tax</p>
+<p>procurement</p>
+<p>THE 
+IMPACTS</p>
+<p>First Things First - The Spending &amp; Transaction Policy</p>
+<p>Confidential</p>
+<p>The purpose of this policy is to ensure that all transactions are properly approved, 
+contracted for, and in the best overall interests of Amazon. Prior to agreeing to any 
+transaction (even if no expenditure is involved) and before initiating or requesting any 
+payment to or from a third party, you must complete or comply with the approvals and 
+controllership described in the Policy.</p>
+<p>• S&amp;TP POLICY</p>
+<p>https://inside.amazon.com/en/services/legal/us/spendingandtransaction/Pages/default.aspx </p>
+<p>https://knet2.amazon.com?%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%
+253d863591e0-763e-4f02-a8aa-bf600e24e8b7</p>
+<p>• S&amp;TP TRAINING SESSION</p>
+<p>https://inside.amazon.com/en/services/legal/us/spendingandtransaction/Pages/default.aspx
+https://knet2.amazon.com/?%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d863591e0-763e-4f02-a8aa-bf600e24e8b7
+https://knet2.amazon.com/?%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d863591e0-763e-4f02-a8aa-bf600e24e8b7
+https://knet2.amazon.com/?%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d863591e0-763e-4f02-a8aa-bf600e24e8b7
+https://knet2.amazon.com/?%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d863591e0-763e-4f02-a8aa-bf600e24e8b7
+https://knet2.amazon.com/?%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d863591e0-763e-4f02-a8aa-bf600e24e8b7
+https://knet2.amazon.com/?%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d863591e0-763e-4f02-a8aa-bf600e24e8b7
+https://knet2.amazon.com/?%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d863591e0-763e-4f02-a8aa-bf600e24e8b7
+https://knet2.amazon.com/?%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d863591e0-763e-4f02-a8aa-bf600e24e8b7
+https://knet2.amazon.com/?%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d863591e0-763e-4f02-a8aa-bf600e24e8b7
+https://knet2.amazon.com/?%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253dlodetails%2526lo%253d863591e0-763e-4f02-a8aa-bf600e24e8b7</p>
+<p>Roles &amp; Responsibilities Who Does What?</p>
+<p>Confidential</p>
+<p>PO Owner - Responsible for the Order inclusion and specific purchase management end to end. In case there is any issue with 
+the PO or the invoice, the PO Owner is the bridge between Amazon and the vendor.</p>
+<p>Vendor Manager Responsible for the Vendor registration,  administration and contact</p>
+<p>Vendor Maintenance Responsible for the Vendor creation, maintenance and administration</p>
+<p>FinOps Corp AP Responsible for performing transactions within AP based on the predetermined rules.</p>
+<p>Corporate Support  Functions Responsible for providing technical support and guideline for Corp AP and Businesses.
+- International Tax
+- Accounting
+- Legal
+- Taskless Tax
+- Tax Compliance</p>
+<p>FinOps BP Support the operating effectiveness, connecting Business/Corporate with FinOps AP</p>
+<p>NOW LET’S START!</p>
+<p>Confidential</p>
+<p>1) Contract Negotiation</p>
+<p>2) Supplier Onboard</p>
+<p>3) Creating a PO</p>
+<p>4) Vendor Invoicing</p>
+<p>5) Invoice Receipt</p>
+<p>6) Validation</p>
+<p>7) Payment</p>
+<p>How the Process Works – Purchase Order cases </p>
+<p>How the Process Works* – Purchase Order cases </p>
+<p>Depends on the Business: 
+- Procurement 
+- Program Managers
+- Business Managers
+- Centrallized support area
+etc</p>
+<p>The Business contact that will be 
+responsible for the Vendor relations</p>
+<p>1) Contract Negotiation</p>
+<p>2) Supplier Onboard</p>
+<p>3) Creating a PO</p>
+<p>4) Vendor Invoicing</p>
+<p>5) Invoice Receipt</p>
+<p>6) Validation</p>
+<p>7) Payment</p>
+<p>• One Business contact to create the requisition
+• One PO Owner
+• Eventually, there are other Business contacts that support with PO issues </p>
+<p>resolution or service/item delivery follow up </p>
+<p>• Interaction between ALL Vendors and Amazon FinOPs</p>
+<p>• FinOps Process</p>
+<p>Business Contact Who Does What?</p>
+<p>Confidential</p>
+<p>PO Owner - Responsible for the Order inclusion and specific purchase management end 
+to end. In case there is any issue with the PO or the invoice, the PO Owner is the bridge 
+between Amazon and the vendor.</p>
+<p>• Vendor Manager Responsible for the Vendor registration,  administration and 
+contact</p>
+<p>• Purchase requisition creator – Connected to the PO Owner’s organization. Must 
+comply with the Purchase details and attend to details once creating the starting 
+requisition to ensure no defects will be generated along the processing</p>
+<p>• Procurement POC</p>
+<p>• Program Managers</p>
+<p>• PO Funds </p>
+<p>• PO Approvers</p>
+<p>• PO Management Support</p>
+<p>Let’s avoid payment issues as we 
+are Customer Obsessed!</p>
+<p>Vendor Onboard</p>
+<p>Confidential</p>
+<p>GPO AND RELATED TEAMS: please check specific rules for Vendor Onboard for Global Procurement Share 
+Services (GPSS) PROJECT GALILEO. Reach out to your Site Procurement POC or: </p>
+<p>https://w.amazon.com/bin/view/Global_Procurement_Shared_Services/Vendor_Onboarding</p>
+<p>GPSS POC galileoproject@amazon.com ; gpo-gpss-vm-communication-smb@amazon.com </p>
+<p>https://w.amazon.com/bin/view/Global_Procurement_Shared_Services/Vendor_Onboarding
+mailto:galileoproject@amazon.com
+mailto:gpo-gpss-vm-communication-smb@amazon.com
+mailto:gpo-gpss-vm-communication-smb@amazon.com
+mailto:gpo-gpss-vm-communication-smb@amazon.com
+mailto:gpo-gpss-vm-communication-smb@amazon.com
+mailto:gpo-gpss-vm-communication-smb@amazon.com
+mailto:gpo-gpss-vm-communication-smb@amazon.com
+mailto:gpo-gpss-vm-communication-smb@amazon.com
+mailto:gpo-gpss-vm-communication-smb@amazon.com
+mailto:gpo-gpss-vm-communication-smb@amazon.com</p>
+<p>Vendor Onboard: Basic Steps (1 of 3)</p>
+<p>The Vendor Onboard is necessary for ALL countries via Payee Central. 
+The standard payment terms is 60 days. </p>
+<p>• Check if the Vendor already exists in Amazon Payee Central. Click on the link:
+https://w.amazon.com/index.php/GFS/VPS/SSC/UserGuide/PayeeManagement#How_do_I_find_a_supplier</p>
+<p>• If the Vendor does not exist in Payee Central, then Vendor Onboard is required. Vendor Managers are 
+responsible for sending the invitation to the Vendors. </p>
+<p>• Payee Central Scope referral https://w.amazon.com/bin/view/Payee_Central/Payee_Central_Current_Scope_Matrix/ </p>
+<p>• Foreign Vendors: of a vendor has already onboarded at any other Amazon country, they will have to onboard 
+again to submit to the specific country tax interview</p>
+<p>• If your Vendor will supply both SERVICES and GOODS, two separated onboard invitations are required. When 
+creating the PO, the corresponding Supplier Code must be used for that specific purchase.</p>
+<p>https://w.amazon.com/index.php/GFS/VPS/SSC/UserGuide/PayeeManagement#How_do_I_find_a_supplier
+https://w.amazon.com/bin/view/Payee_Central/Payee_Central_Current_Scope_Matrix/</p>
+<p>Vendor Onboard: in Payee Central (2 of 3)</p>
+<p>Confidential</p>
+<p>1) Payee Central Wiki Page</p>
+<p>https://w.amazon.com/bin/view/Payee_Central/   </p>
+<p>2) Get access to Payee Central</p>
+<p>https://w.amazon.com/bin/view/Corporate_AP_Guide/payeecentral/permissions</p>
+<p>3) Ask your Vendor to complete the Training Session for Vendors</p>
+<p>https://amazonfinops.au1.qualtrics.com/jfe/form/SV_cDcgMB6mLASWZOC </p>
+<p>4) Send and invitation for the supplier
+https://w.amazon.com/bin/view/Payee_Central/Payee_Central_Payee_Setup/#HHowdoIsetupaPayee3F </p>
+<p>https://broadcast.amazon.com/videos/360950 </p>
+<p>https://w.amazon.com/bin/view/Payee_Central/
+https://w.amazon.com/bin/view/Corporate_AP_Guide/payeecentral/permissions
+https://amazonfinops.au1.qualtrics.com/jfe/form/SV_cDcgMB6mLASWZOC
+https://w.amazon.com/bin/view/Payee_Central/Payee_Central_Payee_Setup/#HHowdoIsetupaPayee3F
+https://broadcast.amazon.com/videos/360950</p>
+<p>Vendor Contact with FinOps: Creating Ticket in Payee Central (3 of 3)</p>
+<p>Confidential</p>
+<p>https://amazonexteu.qualtrics.com/jfe/form/SV_cOL2E5ISvOTVcjQ</p>
+<p>https://amazonexteu.qualtrics.com/jfe/form/SV_cOL2E5ISvOTVcjQ</p>
+<p>Purchase Order (PO)</p>
+<p>Confidential</p>
+<p>Purchase Order (1 of 3)
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx </p>
+<p>1) ONE TIME ORDER OR RECURRING ORDER?</p>
+<p>In case of SINGLE PO: 
+PO-Only Guideline https://inside.amazon.com/en/services/legal/us/spendingandtransaction/Pages/PO-OnlyGuidelines.aspx </p>
+<p>In case of RECURRING PURCHASE (ex. 12 months contract for supplies monthly charged)
+Blanket PO Wiki https://w.amazon.com/bin/view/Blanket_PO_Definition</p>
+<p>COUPA → GCP tool for Corporate Purchases</p>
+<p>SC.OS/CLOUDFORGE → AWS tool for Datacenter Purchases</p>
+<p>2) Creating a PO</p>
+<p>PO EXEMPTS: https://policy.amazon.com/policy/1578</p>
+<p>MANDATORY: THE VENDOR </p>
+<p>MUST INFORM THE PO </p>
+<p>NUMBER IN THE INVOICE.</p>
+<p>https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://inside.amazon.com/en/services/legal/us/spendingandtransaction/Pages/PO-OnlyGuidelines.aspx
+https://inside.amazon.com/en/services/legal/us/spendingandtransaction/Pages/PO-OnlyGuidelines.aspx
+https://inside.amazon.com/en/services/legal/us/spendingandtransaction/Pages/PO-OnlyGuidelines.aspx
+https://w.amazon.com/bin/view/Blanket_PO_Definition</p>
+<p>Purchase Order (2 of 3)
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx </p>
+<p>3) PO DETAILS</p>
+<p>• Supplier number: refer to the exact Vendor TAX ID/Branch(correct TAX ID, fully onboarded) → review the correct 
+supplier code, ensure to select the correct supplier site</p>
+<p>• Amazon Content Group: double check your organization
+• Amazon Location (identified in the GL String)
+• Service or goods description: exactly match the described in the invoice
+• GL String: matching location, org and cost center. Reach out to your Finance POC
+• Fixed Assets x Consumable Goods need separated POs
+• Product type (assets, spare parts, expense) or service needs to match the GL string:
+ Company codes (4R, MG, 5B, MN, B903, B868)
+ GL String Account Code 16999 to indicate Assets
+ GL String Account Code 14808 to indicate Spare Parts
+ GL String Account Code that begins with 6XXXX indicate Expenses
+• PO type: 
+Goods: PO must be 3-way match and quantity-based
+Services or Freights: PO must be 2-way match and amount-based</p>
+<p>https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx</p>
+<p>Purchase Order (3 of 3) – useful links
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx </p>
+<p>COUPA
+COUPA Wiki Page &amp; Office Hours Information https://w.amazon.com/bin/view/Buy_stuff_at_amazon</p>
+<p>Wikis and Training Resources:   https://broadcast.amazon.com/videos/53057
+https://w.amazon.com/bin/view/Coupa_Training
+https://w.amazon.com/bin/view/Corporate_AP_Guide/coupa/</p>
+<p>What amount should I include in the PO?  https://policy.amazon.com/procedure/8314</p>
+<h1 id="coupa-interest-slack-channel-to-ask-general-questions-httpsamzn-fgbsslackcomarchivesc018hs9u60l">Coupa-interest Slack channel to ask general questions: https://amzn-fgbs.slack.com/archives/C018HS9U60L</h1>
+<p>Company code to Coupa content group mapping: https://w.amazon.com/index.php/GCP%20OU%20Company%20Code%20Mapping%20Help</p>
+<p>PAS (Pre-Approved Spend) Queries: https://w.amazon.com/bin/Coupa_Pre_Approved_Spend_PAS_NonPAS_Budget_Periods/</p>
+<p>SIM Ticket creation for other requests: https://t.corp.amazon.com/ (C : CORP NON-INV PROC COUPA / T: COUPA / I: [pick one])</p>
+<p>SC.OS/CLOUDFORGE
+https://w.amazon.com/bin/view/ISCaP/InfraOpsProcurement/
+https://w.amazon.com/bin/view/DCEO/PDX/Cloudforge_Purchasing/
+https://w.amazon.com/bin/view/Corporate_AP_Guide/cloudforge/https://w.amazon.com/bin/view/InfraProcurement/CloudForgeRequisit ion/UserGuide/
+https://w.amazon.com/bin/view/AWSProcurement/
+https://w.amazon.com/index.php/InfraProcurement/CloudForgeRequisition/UserGuide</p>
+<p>https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://w.amazon.com/bin/view/Buy_stuff_at_amazon
+https://broadcast.amazon.com/videos/53057
+https://w.amazon.com/bin/view/Coupa_Training
+https://w.amazon.com/bin/view/Corporate_AP_Guide/coupa/
+https://policy.amazon.com/procedure/8314
+https://amzn-fgbs.slack.com/archives/C018HS9U60L
+https://amzn-fgbs.slack.com/archives/C018HS9U60L
+https://amzn-fgbs.slack.com/archives/C018HS9U60L
+https://w.amazon.com/index.php/GCP%20OU%20Company%20Code%20Mapping%20Help
+https://w.amazon.com/bin/Coupa_Pre_Approved_Spend_PAS_NonPAS_Budget_Periods/
+https://t.corp.amazon.com/
+https://w.amazon.com/bin/view/ISCaP/InfraOpsProcurement/
+https://w.amazon.com/bin/view/DCEO/PDX/Cloudforge_Purchasing/
+https://w.amazon.com/bin/view/Corporate_AP_Guide/cloudforge/https:/w.amazon.com/bin/view/InfraProcurement/CloudForgeRequisition/UserGuide/
+https://w.amazon.com/bin/view/Corporate_AP_Guide/cloudforge/https:/w.amazon.com/bin/view/InfraProcurement/CloudForgeRequisition/UserGuide/
+https://w.amazon.com/bin/view/Corporate_AP_Guide/cloudforge/https:/w.amazon.com/bin/view/InfraProcurement/CloudForgeRequisition/UserGuide/
+https://w.amazon.com/bin/view/AWSProcurement/
+https://w.amazon.com/index.php/InfraProcurement/CloudForgeRequisition/UserGuide</p>
+<p>PO Modifications– DOs and DON’T’s</p>
+<p>Confidential</p>
+<p>Coupa allows for PO modifications to Change the following.</p>
+<p>• Item description for Non -Catalog POs
+• PO Coding changes except for the Company Code
+• Adding the Attachments
+• Match Type Change https://broadcast.amazon.com/videos/165813
+• Need By Date Change → https://broadcast.amazon.com/videos/566765
+• Unit Price Change for Amount Based POs → Refer to the Tutorial https://broadcast.amazon.com/videos/164031
+• Qty Changes on Qty Based PO → Refer to the Tutorial https://broadcast.amazon.com/videos/164031
+• Payment Terms Update → https://broadcast.amazon.com/videos/566832
+• PO Closure → Refer to the Tutorial → https://broadcast.amazon.com/videos/566932
+• PO Re-Opening → Refer to the Tutorial → https://broadcast.amazon.com/videos/566862
+• PO ownership changes → Refer to the Tutorial https://broadcast.amazon.com/videos/566962</p>
+<p>https://broadcast.amazon.com/videos/165813
+https://broadcast.amazon.com/videos/566765
+https://broadcast.amazon.com/videos/164031
+https://broadcast.amazon.com/videos/164031
+https://broadcast.amazon.com/videos/566832
+https://broadcast.amazon.com/videos/566932
+https://broadcast.amazon.com/videos/566862</p>
+<p>Vendor Invoicing</p>
+<p>Confidential</p>
+<p>Vendors</p>
+<p>Confidential</p>
+<p>• Double check the information given in the onboard</p>
+<p>• The invoice needs to inform the PO number</p>
+<p>• Goods: inform the corresponding PO line item in the invoice</p>
+<p>Confirmation, Approval and Payment</p>
+<p>Confidential</p>
+<p>Confirmation, Approval and Payment (1 of 3)
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx </p>
+<p>GOODS:  3-Way match The PO Owner is responsible for confirming that the item was 
+received and there is match between the ordered and received material. 
+COUPA: https://broadcast.amazon.com/videos/72541</p>
+<p>SC.OS/Cloudforge https://w.amazon.com/bin/viewrev/AWS_SCM_OPS_SUPPORT_FAQ/WebHome?rev=71.1#HReceivingorReturningonCFPlatform</p>
+<p>SERVICES: Confirmation of Service and Approval for Payment → Once the invoice is
+processed, the PO Owner receives an e-mail from an automatic Oracle workfow requesting
+the verification and approval for payment. The payment will only be performed once the
+approval is given. In case there is no response from the PO Owner, the workflow is escalated.</p>
+<p>The payment is triggered only after the Confirmation of Goods Receipt (3-way match) or Service approval.</p>
+<p>If the invoice is on Hold due to missing receipt/approval, an automatic e-mail is sent to the user/approver </p>
+<p>requesting action.</p>
+<p>https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://broadcast.amazon.com/videos/72541
+https://w.amazon.com/bin/viewrev/AWS_SCM_OPS_SUPPORT_FAQ/WebHome?rev=71.1#HReceivingorReturningonCFPlatform</p>
+<p>Vendor Invoicing  Cancellation
+PO Requestors: validate all PO and vendor invoice information in order to avoid incorrect remittance. If an error 
+was identified after the invoice was issued, request the vendor the immediate proof of cancellation of the 
+invoice. </p>
+<p>Confirmation, Approval and Payment (2 of 3)
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx </p>
+<p>If: 
+- You are unsure of the invoice data
+- The material doesn’t match what was ordered
+- There are any inconsistencies with the purchase
+NEVER confirm the receipt of a Good (3-way match) because of potential compliance issues</p>
+<p>ALWAYS keep a close communication with the vendor in order to require any necessary corrections or cancellations on time. 
+There is a DEADLINE FOR CANCELLATIONS according to local regulation.</p>
+<p>https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx</p>
+<p>Invoice Receipt &amp; Validation 
+The Invoice Receipt team will verify, validate and ingest all data related to the invoice received by the Vendor 
+versus the PO that was created by the PO Owner.  </p>
+<p>Payment 
+If all previous steps were correctly followed, your vendor should expect the payment on the agreed due date. The 
+vendor can view the payment status in Payee Central.</p>
+<p>For Internal use: Payee Central Training Guide Link
+See pages 43-45 at the link</p>
+<p>If there is any issue, a Ticket will be created and adressed to the PO Owner containing the issue description to be 
+solved. The Payment will be kept On Hold until the issue is resolved. </p>
+<p>Confirmation, Approval and Payment (3 of 3)
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx </p>
+<p>https://document-versions-production.s3.us-west-2.amazonaws.com/23b3a052-029f-4752-8e93-dc2fd420f7a5?response-content-disposition=attachment%3B%20filename%3D%22Payee%20Central%20Internal%20Training%20Guide.pdf%22&amp;response-content-type=application%2Fpdf&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIA2DQ7HDUA3A3ZVB4W%2F20230329%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20230329T153124Z&amp;X-Amz-Expires=300&amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIFPgxsaYpNS0sLteoGzv4IT5ckWPqUSa9%2BW6xknu1hWRAiEAxcCwnX7Cd35YmZ0rmVZJwRx%2BsWHoNvC9gdWzr9TbUloqyAMIYBADGgw2OTQ3NzY0MzgwMTciDJj%2F16Rj4lp6s%2B2QzyqlA9A2qXhjWeC5ED3ycmN1TNojm7cRkU3BeZIkmwsi17Ok47ZO4BCLBTqShVpfw5byOMfsZ87wTiNtDL1qRna2iQrYeLzxrmGkTQWv1tlDhTM0Sn%2BfhqphDb1kiTNqtFNZCv5nSk%2F465eRK%2B%2FllIYHs9pQ1w%2FhGSfiwSNdEZl98kKpPeBs7gtcJ5UVwosFi7Kl%2FD1RmzcxommHKjBhC8F4F2LlqIkfRUK9sAKhRZZOCkKm14X9UqDjD8U5jj4KSJ%2F4CAC4vmDLlhLoqrtVSJFd2%2FyaeQHZV%2FhWNikvVkInDtR29UWVLVkeyAK%2BxF3vN%2FNYrso1EZuG%2BBaRxlQbvB6vRNYiuhn9RvWQefKu1tmPMlsIyKNd5Kdu0FQKIMD7aLdx%2BMV2yJH%2B7Q5asiluRULnuU4Pud8HLQPcbuFWotaerNlRqxYi0z19iFCjx9laETHLEfSso6udbuU98ixdair3veYdUxcYbnq53%2FZOXt%2BZtkj2WxJUvLRKl%2FrrUmyVbT%2FpFaUklJyKmqBTpVN6HCCBVpI30%2FfvWzMzMx%2BLo5kAmn%2BUXseJhjwwspmRoQY6oQHcsaQG16dwczqS%2BneT8WTgZar38o9Ygsy2SJpjMA2ShXzv4dRMVP6CMJi5WYddn%2BkOMSHq36o5uezNV%2F4REcGORpN5h%2Fd%2FGD3uYWjvXo52dInjw7XGdLH0wEGfZ2Wtce%2Bl3NMK7s1vNF3W8Kih8tfo93l8BZZcEv3NoLuFpwyLkU7EqIkDN8f8N6wdPY0b1FTiIr83ML6hjVlNBhFRLKRIaQ%3D%3D&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=4352043309f8db37a2211a498b1aed7a07c1d7c825925a1e239d71f2c34293c6
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx
+https://inside.amazon.com/en/services/finance/accountspayable/Pages/SA-AP.aspx</p>
+<p>Support Links</p>
+<p>• Corporate AP Wiki → https://w.amazon.com/bin/view/Corporate_AP_FinOps_BP</p>
+<p>• Payee Central Search Invoice→ https://finopscentral-na.amazon.com/payeecentral/invoices#/search</p>
+<p>• Payee Central Invoice Holds → https://finopscentral-na.amazon.com/payeecentral/invoices#/hold/search</p>
+<p>• The ALL-IN-1 guide for PO requesters → https://w.amazon.com/bin/view/Corporate_AP_Guide/</p>
+<p>• Invoice on Hold SOP to take action → https://w.amazon.com/bin/view/Payee_Central/Payee_Central_Invoice_Holds/action</p>
+<p>• Amazon Payee Central link for Vendors → https://payeecentral.amazon.com/</p>
+<p>• Company code to Coupa content group mapping → https://w.amazon.com/index.php/GCP%20OU%20Company%20Code%20Mapping%20Help</p>
+<p>• Payee Central Invoice on Hold (IOH) - How to Resolve → https://broadcast.amazon.com/videos/1179170</p>
+<p>• Payee Central Invoice Holds Training → Training Video</p>
+<p>• PO Creation Steps → https://broadcast.amazon.com/videos/897710</p>
+<p>• Extending a Payee to additional countries, business or payment types → Wiki Link</p>
+<p>• How to send and invitation for the supplier → Video Training , Wiki Link</p>
+<p>• Check if the Vendor already exists in Amazon Payee Central → Wiki</p>
+<p>• PO Approver Delegation when OOO → Video Training</p>
+<p>https://w.amazon.com/bin/view/Corporate_AP_FinOps_BP
+https://finopscentral-na.amazon.com/payeecentral/invoices#/search
+https://finopscentral-na.amazon.com/payeecentral/invoices#/search
+https://finopscentral-na.amazon.com/payeecentral/invoices#/search
+https://finopscentral-na.amazon.com/payeecentral/invoices#/hold/search
+https://finopscentral-na.amazon.com/payeecentral/invoices#/hold/search
+https://finopscentral-na.amazon.com/payeecentral/invoices#/hold/search
+https://w.amazon.com/bin/view/Corporate_AP_Guide/
+https://w.amazon.com/bin/view/Payee_Central/Payee_Central_Invoice_Holds/action
+https://payeecentral.amazon.com/
+https://w.amazon.com/index.php/GCP%20OU%20Company%20Code%20Mapping%20Help
+https://broadcast.amazon.com/videos/1179170
+https://broadcast.amazon.com/videos/137384?query=Hold+resolution&amp;focus=body&amp;match=and+complete+++the+receipts+that+in+West+hold+++can+be+resolved+.+Um+%2C+so
+https://broadcast.amazon.com/videos/897710
+https://w.amazon.com/bin/view/Payee_Central/Payee_Central_Payee_Setup/Extend_New_Country
+https://broadcast.amazon.com/videos/360950
+https://w.amazon.com/bin/view/Payee_Central/Payee_Central_Payee_Setup/#HHowdoIsetupaPayee3F
+https://w.amazon.com/index.php/GFS/VPS/SSC/UserGuide/PayeeManagement#How_do_I_find_a_supplier
+https://broadcast.amazon.com/videos/164523</p>
+<p>Payee Modification Links</p>
+<p>• Update Payment Terms https://tt.amazon.com/quicklink/Q000763124 
+• New Site Creation https://t.corp.amazon.com/create/quicklink/Q001059954 
+• Update Remit Email https://t.corp.amazon.com/create/templates/8532acae-28d9-4df9-9353-6f788c6b0f2c 
+• Update Payment Method https://t.corp.amazon.com/create/templates/cbd92c4e-5d33-4c37-8110-e7421d65ad4b 
+• Update Bank Details https://t.corp.amazon.com/create/templates/0dbaab90-e402-4f97-9177-5460894fb859 
+• Supplier Name Change https://t.corp.amazon.com/create/templates/98390975-3817-4e6c-a350-adf866cc5046 
+• Enable Purchasing Box https://t.corp.amazon.com/create/templates/ad129c21-4f7e-4d6d-bd30-afe5a9252cda 
+• Payee Central - Backfill https://t.corp.amazon.com/create/quicklink/Q001014527 
+• Deactivate Payee https://t.corp.amazon.com/create/quicklink/Q000889750 
+• Activate Payee https://tt.amazon.com/quicklink/Q001319913</p>
+<p>https://tt.amazon.com/quicklink/Q000763124
+https://t.corp.amazon.com/create/quicklink/Q001059954
+https://t.corp.amazon.com/create/templates/8532acae-28d9-4df9-9353-6f788c6b0f2c
+https://t.corp.amazon.com/create/templates/8532acae-28d9-4df9-9353-6f788c6b0f2c
+https://t.corp.amazon.com/create/templates/8532acae-28d9-4df9-9353-6f788c6b0f2c
+https://t.corp.amazon.com/create/templates/8532acae-28d9-4df9-9353-6f788c6b0f2c
+https://t.corp.amazon.com/create/templates/8532acae-28d9-4df9-9353-6f788c6b0f2c
+https://t.corp.amazon.com/create/templates/8532acae-28d9-4df9-9353-6f788c6b0f2c
+https://t.corp.amazon.com/create/templates/8532acae-28d9-4df9-9353-6f788c6b0f2c
+https://t.corp.amazon.com/create/templates/8532acae-28d9-4df9-9353-6f788c6b0f2c
+https://t.corp.amazon.com/create/templates/8532acae-28d9-4df9-9353-6f788c6b0f2c
+https://t.corp.amazon.com/create/templates/cbd92c4e-5d33-4c37-8110-e7421d65ad4b
+https://t.corp.amazon.com/create/templates/cbd92c4e-5d33-4c37-8110-e7421d65ad4b
+https://t.corp.amazon.com/create/templates/cbd92c4e-5d33-4c37-8110-e7421d65ad4b
+https://t.corp.amazon.com/create/templates/cbd92c4e-5d33-4c37-8110-e7421d65ad4b
+https://t.corp.amazon.com/create/templates/cbd92c4e-5d33-4c37-8110-e7421d65ad4b
+https://t.corp.amazon.com/create/templates/cbd92c4e-5d33-4c37-8110-e7421d65ad4b
+https://t.corp.amazon.com/create/templates/cbd92c4e-5d33-4c37-8110-e7421d65ad4b
+https://t.corp.amazon.com/create/templates/cbd92c4e-5d33-4c37-8110-e7421d65ad4b
+https://t.corp.amazon.com/create/templates/cbd92c4e-5d33-4c37-8110-e7421d65ad4b
+https://t.corp.amazon.com/create/templates/0dbaab90-e402-4f97-9177-5460894fb859
+https://t.corp.amazon.com/create/templates/0dbaab90-e402-4f97-9177-5460894fb859
+https://t.corp.amazon.com/create/templates/0dbaab90-e402-4f97-9177-5460894fb859
+https://t.corp.amazon.com/create/templates/0dbaab90-e402-4f97-9177-5460894fb859
+https://t.corp.amazon.com/create/templates/0dbaab90-e402-4f97-9177-5460894fb859
+https://t.corp.amazon.com/create/templates/0dbaab90-e402-4f97-9177-5460894fb859
+https://t.corp.amazon.com/create/templates/0dbaab90-e402-4f97-9177-5460894fb859
+https://t.corp.amazon.com/create/templates/0dbaab90-e402-4f97-9177-5460894fb859
+https://t.corp.amazon.com/create/templates/0dbaab90-e402-4f97-9177-5460894fb859
+https://t.corp.amazon.com/create/templates/98390975-3817-4e6c-a350-adf866cc5046
+https://t.corp.amazon.com/create/templates/98390975-3817-4e6c-a350-adf866cc5046
+https://t.corp.amazon.com/create/templates/98390975-3817-4e6c-a350-adf866cc5046
+https://t.corp.amazon.com/create/templates/98390975-3817-4e6c-a350-adf866cc5046
+https://t.corp.amazon.com/create/templates/98390975-3817-4e6c-a350-adf866cc5046
+https://t.corp.amazon.com/create/templates/98390975-3817-4e6c-a350-adf866cc5046
+https://t.corp.amazon.com/create/templates/98390975-3817-4e6c-a350-adf866cc5046
+https://t.corp.amazon.com/create/templates/98390975-3817-4e6c-a350-adf866cc5046
+https://t.corp.amazon.com/create/templates/98390975-3817-4e6c-a350-adf866cc5046
+https://t.corp.amazon.com/create/templates/ad129c21-4f7e-4d6d-bd30-afe5a9252cda
+https://t.corp.amazon.com/create/templates/ad129c21-4f7e-4d6d-bd30-afe5a9252cda
+https://t.corp.amazon.com/create/templates/ad129c21-4f7e-4d6d-bd30-afe5a9252cda
+https://t.corp.amazon.com/create/templates/ad129c21-4f7e-4d6d-bd30-afe5a9252cda
+https://t.corp.amazon.com/create/templates/ad129c21-4f7e-4d6d-bd30-afe5a9252cda
+https://t.corp.amazon.com/create/templates/ad129c21-4f7e-4d6d-bd30-afe5a9252cda
+https://t.corp.amazon.com/create/templates/ad129c21-4f7e-4d6d-bd30-afe5a9252cda
+https://t.corp.amazon.com/create/templates/ad129c21-4f7e-4d6d-bd30-afe5a9252cda
+https://t.corp.amazon.com/create/templates/ad129c21-4f7e-4d6d-bd30-afe5a9252cda
+https://t.corp.amazon.com/create/quicklink/Q001014527
+https://t.corp.amazon.com/create/quicklink/Q000889750
+https://tt.amazon.com/quicklink/Q001319913</p>
+<p>THANK YOU</p>
+<p>Confidential</p>
+<p>Appendix
+• Most Common Issues and How to Solve
+• Transactions included in Corporate Payments
+• Useful Links
+• Critical vendors</p>
+<p>Most Common PO Issues and How to Solve</p>
+<p>Confidential</p>
+<p>Most Common PO Issues and How to Solve</p>
+<p>Defect Name Description Root Cause What to Do (TT resolving) How to Prevent This Issue Long Term Solution</p>
+<p>The negotiation with the Vendor </p>
+<p>have inconsistencies.</p>
+<p>(1) PO Requestor must ensure what is </p>
+<p>the correct one (invoice or PO);</p>
+<p>(2) If the invoice is correct and the PO is </p>
+<p>incorrect, add funds to the PO; </p>
+<p>(3) If the PO is correct and the Invoice is </p>
+<p>incorrect, ask the vendor to cancel the </p>
+<p>invoice and send the proof of </p>
+<p>cancellation immediately and trough the </p>
+<p>same TT;</p>
+<p>PO requestor to validate a </p>
+<p>preview of the invoice with the </p>
+<p>Vendor before its submitted to </p>
+<p>AP mailbox</p>
+<p>None. PO and invoice </p>
+<p>must match.</p>
+<p>The PO has only enough funds for </p>
+<p>the net purchase amount.</p>
+<p>Since Brazil system requires the full </p>
+<p>amount in the processing, the user must </p>
+<p>add funds to cover the taxes and </p>
+<p>additional charges.</p>
+<p>PO requestor to validate a gross </p>
+<p>price preview with the Vendor </p>
+<p>before to use as reference for </p>
+<p>the PO creation </p>
+<p>Being analized through </p>
+<p>Volcano. To be </p>
+<p>confirmed.</p>
+<p>There was a previous invoice </p>
+<p>issued against the PO, but it was </p>
+<p>wrong/cancelled and should not </p>
+<p>be paid. The PO is consuming </p>
+<p>funds that cannot be reversed due </p>
+<p>to system limitations.</p>
+<p>(1) Immediately send the proof of </p>
+<p>cancellation of the previous invoice </p>
+<p>trough the same TT;</p>
+<p>(2) Corp AP will analyze case by case and </p>
+<p>define action path to the PO Requetor </p>
+<p>throught the TT</p>
+<p>Always keep close control of all </p>
+<p>invoices your Vendor is sending </p>
+<p>Amazon. If there is any wrong </p>
+<p>invoice, always request </p>
+<p>immediate proof of </p>
+<p>cancellation to the Vendor and </p>
+<p>inform Corp AP team (within </p>
+<p>same month of the original </p>
+<p>invoice, preferably)</p>
+<p>Being analized through </p>
+<p>Volcano. To be </p>
+<p>confirmed.</p>
+<p>Happens when the PO does not </p>
+<p>have enough budgets to process </p>
+<p>the payment. The invoice </p>
+<p>amount (or sum of invoices </p>
+<p>issued against the PO) is more </p>
+<p>than the total PO approved </p>
+<p>fund.</p>
+<p>Short of Funds</p>
+<p>Most Common PO Issues</p>
+<p>Defect Name Description Root Cause What to Do (TT resolving) How to Prevent This Issue Long Term Solution</p>
+<p>Missing PO Number</p>
+<p>Missing GL String</p>
+<p>Incorrect/ Invalid Location</p>
+<p>Happens when the PO or invoice </p>
+<p>location are different, or it </p>
+<p>doesn't match with the GL String </p>
+<p>Location.</p>
+<p>The PO and invoice location </p>
+<p>information was not properly </p>
+<p>validated before the negotiation </p>
+<p>or the GL String was not prior </p>
+<p>verified by a Finance POC.</p>
+<p>(1) PO Requestor must ensure what is </p>
+<p>the correct one (invoice or PO);</p>
+<p>(2) If the invoice is correct and the PO is </p>
+<p>incorrect, correct the PO information; </p>
+<p>(3) If the PO is correct and the Invoice is </p>
+<p>incorrect, ask the vendor to cancel the </p>
+<p>invoice and send the proof of </p>
+<p>cancellation immediately and send it </p>
+<p>trough the same TT;</p>
+<p>PO requestor to validate a </p>
+<p>preview of the invoice with the </p>
+<p>Vendor before its submitted to </p>
+<p>AP mailbox. Also validate teh </p>
+<p>GL String with a Finance POC.</p>
+<p>None. This requirement </p>
+<p>will be kept.</p>
+<p>PO Closed</p>
+<p>Happens when the PO is already </p>
+<p>closed by the Requestor and </p>
+<p>cannot be used to process any </p>
+<p>more invoices.</p>
+<p>If all invoices were already issued </p>
+<p>to the PO before closing it, the PO </p>
+<p>requestor didn't create a new PO </p>
+<p>and updated the Vendor with the </p>
+<p>new correct PO number.</p>
+<p>(1) Re-Open the PO and add funds so the </p>
+<p>invoice can be processed;</p>
+<p>(2) OR Create a new PO and inform Corp </p>
+<p>AP in the TT</p>
+<p>Always monitor your POs and </p>
+<p>ensure the Vendor mentions </p>
+<p>the correct one in the invoice</p>
+<p>None. This requirement </p>
+<p>will be kept.</p>
+<p>Incorrect PO / GL String</p>
+<p>Happens when the PO don't </p>
+<p>refer to the same Vendor in the </p>
+<p>invoice, or the GL String is not </p>
+<p>correspondent to the correct </p>
+<p>expense account x product type</p>
+<p>(1) The PO Requestor didn't select </p>
+<p>the correct supplier number to </p>
+<p>create the PO; </p>
+<p>(2) OR the Vendor issued the </p>
+<p>invoice from the wrong branch;</p>
+<p>(3) AND the PO requestor didn't </p>
+<p>select the correct GL String for the </p>
+<p>specific product type</p>
+<p>(1) PO Requestor must ensure what is </p>
+<p>the correct one (invoice or PO);</p>
+<p>(2) If the invoice is correct and the PO is </p>
+<p>incorrect, correct the PO; </p>
+<p>(3) If the PO is correct and the Invoice is </p>
+<p>incorrect, ask the vendor to cancel the </p>
+<p>invoice and send the proof of </p>
+<p>cancellation immediately and send it </p>
+<p>trough the same TT - and issue a new </p>
+<p>correct invoice</p>
+<p>PO requestor to validate a </p>
+<p>preview of the invoice with the </p>
+<p>Vendor before its submitted to </p>
+<p>AP mailbox. Also validate the </p>
+<p>GL String with a Finance POC. </p>
+<p>None. This requirement </p>
+<p>will be kept.</p>
+<p>Happens when the invoice </p>
+<p>doesn´t mention the PO number </p>
+<p>(or GL string - in PO exempt </p>
+<p>cases) and Corp AP cannot match </p>
+<p>the invoice to the proper </p>
+<p>approved budget.</p>
+<p>The Vendor was not informed or </p>
+<p>forgot to add the mandatory </p>
+<p>information in the invoice.</p>
+<p>Inform the PO number or GL String (if PO </p>
+<p>exempt) in the TT</p>
+<p>None. This requirement </p>
+<p>will be kept.</p>
+<p>Inform the Vendor that PO </p>
+<p>reference (or GL string) is </p>
+<p>mandatory to be referenced in </p>
+<p>the invoice and always send </p>
+<p>the updated PO copy to the </p>
+<p>vendor. </p>
+<p>Most Common PO Issues</p>
+<p>Defect Name Description Root Cause What to Do (TT resolving) How to Prevent This Issue Long Term Solution</p>
+<p>Vendor Not Registered in OFA</p>
+<p>Happens when the invoice was </p>
+<p>received by a Vendor in the </p>
+<p>Mailbox but there is no Vendor </p>
+<p>Oboard for that Vendor CNPJ.</p>
+<p>There was no onboard invitation </p>
+<p>made to that Vendor, or the </p>
+<p>onboard was not completed.</p>
+<p>Vendor Manager send the Vendor </p>
+<p>Onboard invitation to the Vendor and </p>
+<p>ask them to complete the onboard </p>
+<p>steps.</p>
+<p>PO Requestors should always </p>
+<p>verify the correct supplier </p>
+<p>number exists for the Vendor's </p>
+<p>branch before asking them to </p>
+<p>send invoices to Amazon </p>
+<p>mailbox.</p>
+<p>Being analized through </p>
+<p>Volcano. To be </p>
+<p>confirmed.</p>
+<p>Quantity Rec (AP Holds)</p>
+<p>Happens when there is no </p>
+<p>confirmation of the material </p>
+<p>receipt (3-way match)</p>
+<p>PO Requestor forgot to confirm </p>
+<p>receipt.
+Confirm receipt. Confirm receipt.</p>
+<p>None. This requirement </p>
+<p>will be kept.</p>
+<p>Max Ship Amount (AP Holds)</p>
+<p>Qty Ord (AP Holds)</p>
+<p>Missing Approval (Services)</p>
+<p>Happens when a Service invoice </p>
+<p>is on Hold waiting for the </p>
+<p>Business approval in OFA to </p>
+<p>move forward</p>
+<p>PO Approver received an e-mail </p>
+<p>from ofa-wf-prod@amazon.com </p>
+<p>but didn't realize there is an action </p>
+<p>pending</p>
+<p>Approve the Service in OFA so it can be </p>
+<p>paid.</p>
+<p>Approve the Service in OFA so </p>
+<p>it can be paid.</p>
+<p>None. This requirement </p>
+<p>will be kept.</p>
+<p>Similar to Short of Funds. PO </p>
+<p>does not have sufficient funds </p>
+<p>to cover total invoice amount.</p>
+<p>Total PO and invoice amount and </p>
+<p>quantity discrepancies by line.</p>
+<p>Corp AP will indicate the correct path </p>
+<p>case by case.</p>
+<p>PO Line vs Invoice Line ideally </p>
+<p>should match 100% (net + </p>
+<p>taxes)</p>
+<p>Being analized through </p>
+<p>Volcano. To be </p>
+<p>confirmed.</p>
+<p>Most Common PO Issues – AP HOLDS: QTY REC COUPA</p>
+<p>How is the QTY REC hold resolved in Coupa?
+wiki: https://broadcast.amazon.com/videos/164520</p>
+<ol>
+<li>The requester must search for the PO to receive.</li>
+</ol>
+<p>Most Common PO Issues – AP HOLDS: QTY REC COUPA</p>
+<ol>
+<li>
+<p>Click on the truck Icon</p>
+</li>
+<li>
+<p>Choose the line, quantity and date you want to receive and 
+save the changes.</p>
+</li>
+</ol>
+<p>Most Common PO Issues – QTY REC SC.OS/CLOUDFORGE</p>
+<p>How is the QTY REC hold resolved in SC.OS/Cloudforge?</p>
+<p>Wiki: https://w.amazon.com/bin/view/ARN_Logistics_-_Receiving_POs_in_Cloudforge_Procurement/</p>
+<p>Most Common PO Issues – AP HOLDS: PO OVERBILLED</p>
+<p>Note: In Payee Central Hold is described as "PO Overbilled" and in Oracle as "Max Ship Amount“. It also adds "Qty Ord", 
+which is released at the same time as the Po Overbilled hold.</p>
+<p>Most Common PO Issues – AP HOLDS: PO OVERBILLED COUPA</p>
+<p>How is the PO OVERBILLED hold resolved in COUPA?</p>
+<p>Video Explaining adding funds to PO https://broadcast.amazon.com/videos/164031 </p>
+<p>Step by Step:
+1-Select your name on the top </p>
+<p>2-Select Activity </p>
+<p>3- Then Select Orders</p>
+<p>4- Provide PO in search </p>
+<p>5- Select PO</p>
+<p>6- Scroll down to Bottom you will find Request change.</p>
+<p>7-Click on Request change.</p>
+<p>8- Scroll down to Bottom you will Find Add Line</p>
+<p>9-Select Add line.  Once you provide the details( like Description, Qty, amount Need by date, category, invoice matching type)</p>
+<p>10-click on Submit change request</p>
+<p>Once the funds are added to the PO, and the holds team gets notified we proceed to correct the matching in Oracle in order to release the hold. </p>
+<p>Most Common PO Issues – PO OVERBILLED SC.OS/Cloudforge</p>
+<p>How is the PO OVERBILLED hold resolved in SC.OS/Cloudforge?
+ALL PO management instructions can be found at the Wiki https://w.amazon.com/bin/view/AWSProcurement </p>
+<p>https://w.amazon.com/bin/view/AWSProcurement</p>
+<p>Types of Transaction included in Corporate Payments</p>
+<p>Confidential</p>
+<p>• Purchase Ordering (COUPA/SC.OS/ 
+Cloudforge)</p>
+<p>• Legal Firms (Legal Billing)</p>
+<p>• Tax services (Tax Billing)</p>
+<p>• Colocation</p>
+<p>• Direct Debts</p>
+<p>• Royalty payments</p>
+<p>• Funding</p>
+<p>• Remessas (bookkeeping only)</p>
+<p>• Early Payments</p>
+<p>• Pre-Payment</p>
+<p>• Remessas (bookkeeping only)</p>
+<p>• Transportation payments (TIPS)</p>
+<p>• Litigation payments</p>
+<p>• Corporate Card (P-Card)</p>
+<p>• Ops Rentals</p>
+<p>• Office Rentals</p>
+<p>• BR Associates</p>
+<p>• Critical Vendors</p>
+<p>• others</p>
+<p>Useful Links (1 of 2)</p>
+<p>Confidential</p>
+<p>CORPORATE AP GUIDE https://w.amazon.com/bin/view/Corporate_AP_Guide</p>
+<p>S&amp;TP https://inside.amazon.com/en/services/legal/us/spendingandtransaction/Pages/default.aspx</p>
+<p>PO-Only Guideline https://inside.amazon.com/en/services/legal/us/spendingandtransaction/Pages/PO-OnlyGuidelines.aspx</p>
+<p>AWS Procurement https://w.amazon.com/bin/view/AWSProcurement/</p>
+<p>COMPANY CODES https://w.amazon.com/bin/view/GCP_OU_Company_Code_Mapping_Help/</p>
+<p>GLOBAL PO &amp; APPROVAL THRESHOLD EXCEPTIONS https://policy.amazon.com/policy/1578</p>
+<p>BRAZIL CORP AP PAGE https://inside.amazon.com/en/services/finance/accountspayable/Pages/Brazil-Ap-Page.aspx</p>
+<p>COUPA TRAINING https://w.amazon.com/bin/view/Coupa_Training</p>
+<p>PAYEE MANAGEMENT https://w.amazon.com/index.php/GFS/VPS/SSC/UserGuide/PayeeManagement#How_do_I_find_a_supplier</p>
+<p>PAYMENT TERMS https://w.amazon.com/index.php/Global_Corporate_Standard_Payment_Terms_Policy_(Non-Inventory)</p>
+<p>NGOs https://legal.amazon.com/sites/LegalTeams/InternationalConsumerLegal/LiBra/Pages/ngos.aspx</p>
+<p>LATAM FINOPS WHO IS WHO https://w.amazon.com/bin/view/FinOpsLATAMwhoiswho/</p>
+<p>CHART OF ACCOUNTS https://share.amazon.com/sites/Corporate_Accounting/global_accounting/COA/Listings/OFA/cost_center.html</p>
+<p>INVOICE RECEIVING (BRAZIL) https://w.amazon.com/bin/view/Invoice_Receiving_Process_Brazil/</p>
+<p>Useful Links (2 of 2)</p>
+<p>Confidential</p>
+<p>LATAM CRITICAL VENDORS https://w.amazon.com/index.php/Latam%20Critical%20Vendors%20Guide</p>
+<p>PAYEE CENTRAL https://w.amazon.com/bin/view/Payee_Central</p>
+<p>P2P GUIDE https://river-dub.amazon.com/BTS13/home?buildingType=FinComBTS</p>
+<p>CREATURE https://w.amazon.com/bin/view/FinanceAutomation/FinanceApprovals/Creature/</p>
+<p>VENDOR MANAGEMENT ROLES &amp; RESPONSIBILITIES https://w.amazon.com/bin/view/Roles&amp;Responsabilities</p>
+<p>VENDOR MAINTENANCE https://w.amazon.com/bin/view/AP-VM/Home</p>
+<p>RETAIL ACCOUNTS PAYABLE https://w.amazon.com/bin/view/AccountsPayables/RetailBrazil/</p>
+<p>INVOICE HOLDS TOOL https://w.amazon.com/bin/view/Payee_Central/Payee_Central_Invoice_Holds/</p>
+<p>INVOICE REQUIREMENTS https://w.amazon.com/bin/view/Corporate_Accounts_Payable_Invoice_Requirements/</p>
+<p>BLANKET PO https://w.amazon.com/bin/view/Blanket_PO_Definition/</p>
+<p>INTERNAL SEARCH TOOL https://is.amazon.com/</p>
+<p>PAYEE CENTRAL COMPLETE GUIDE https://document-versions-production.s3.us-west-2.amazonaws.com/23b3a052-029f-4752-8e93-dc2fd420f7a5?response-content-disposition=attachment%3B%20filename%3D%22Payee%20Central%20Internal%20Training%20Guide.pdf%22&amp;response-content-type=application%2Fpdf&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIA2DQ7HDUA3A3ZVB4W%2F20230329%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20230329T153124Z&amp;X-Amz-Expires=300&amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIFPgxsaYpNS0sLteoGzv4IT5ckWPqUSa9%2BW6xknu1hWRAiEAxcCwnX7Cd35YmZ0rmVZJwRx%2BsWHoNvC9gdWzr9TbUloqyAMIYBADGgw2OTQ3NzY0MzgwMTciDJj%2F16Rj4lp6s%2B2QzyqlA9A2qXhjWeC5ED3ycmN1TNojm7cRkU3BeZIkmwsi17Ok47ZO4BCLBTqShVpfw5byOMfsZ87wTiNtDL1qRna2iQrYeLzxrmGkTQWv1tlDhTM0Sn%2BfhqphDb1kiTNqtFNZCv5nSk%2F465eRK%2B%2FllIYHs9pQ1w%2FhGSfiwSNdEZl98kKpPeBs7gtcJ5UVwosFi7Kl%2FD1RmzcxommHKjBhC8F4F2LlqIkfRUK9sAKhRZZOCkKm14X9UqDjD8U5jj4KSJ%2F4CAC4vmDLlhLoqrtVSJFd2%2FyaeQHZV%2FhWNikvVkInDtR29UWVLVkeyAK%2BxF3vN%2FNYrso1EZuG%2BBaRxlQbvB6vRNYiuhn9RvWQefKu1tmPMlsIyKNd5Kdu0FQKIMD7aLdx%2BMV2yJH%2B7Q5asiluRULnuU4Pud8HLQPcbuFWotaerNlRqxYi0z19iFCjx9laETHLEfSso6udbuU98ixdair3veYdUxcYbnq53%2FZOXt%2BZtkj2WxJUvLRKl%2FrrUmyVbT%2FpFaUklJyKmqBTpVN6HCCBVpI30%2FfvWzMzMx%2BLo5kAmn%2BUXseJhjwwspmRoQY6oQHcsaQG16dwczqS%2BneT8WTgZar38o9Ygsy2SJpjMA2ShXzv4dRMVP6CMJi5WYddn%2BkOMSHq36o5uezNV%2F4REcGORpN5h%2Fd%2FGD3uYWjvXo52dInjw7XGdLH0wEGfZ2Wtce%2Bl3NMK7s1vNF3W8Kih8tfo93l8BZZcEv3NoLuFpwyLkU7EqIkDN8f8N6wdPY0b1FTiIr83ML6hjVlNBhFRLKRIaQ%3D%3D&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=4352043309f8db37a2211a498b1aed7a07c1d7c825925a1e239d71f2c34293c6</p>
+<p>Critical Vendors</p>
+<p>Confidential</p>
+<p>Critical Vendors (1 of 2)
+https://w.amazon.com/bin/view/Critical_vendor_creation/ </p>
+<p>WHO IS A CRITICAL VENDOR?</p>
+<p>A Critical Vendor can be defined as vendors who as a result of non/late payment of invoices could impact Amazon by:</p>
+<p>• causing any of our buildings/office spaces to be unfit and/or unsafe for use</p>
+<p>• causing reputational damage to Amazon or result in non-negotiable penalties/fees.</p>
+<p>• disturbing traffic to Amazon websites or impairing our commitment to deliver customer orders on time.</p>
+<p>• risk of service interruption affecting core operations</p>
+<p>TYPES OF CRITICAL VENDORS LATAM:</p>
+<p>• Utility (Gas / Electric / Water / Waste / Etc.)</p>
+<p>• Telecommunication (Voice Service / Data Circuits / Transit or Transport / Etc.)</p>
+<p>• Building Rent / Lease / Colocations (https://w.amazon.com/bin/view/Dglenny%40/Training/CoLo/ )</p>
+<p>• Employee Benefits ( Employee Benefits like Insurance, Health care, Meal passes &amp; Relocation charges etc.)</p>
+<p>https://w.amazon.com/bin/view/Critical_vendor_creation/
+https://w.amazon.com/bin/view/Dglenny%40/Training/CoLo/</p>
+<p>Critical Vendors (2 of 2)
+https://w.amazon.com/bin/view/Critical_vendor_creation/ </p>
+<p>CRITICAL VENDOR SUPPLIER ONBOARD</p>
+<p>The Critical Vendor Supplier Onboard must follow the general steps in Payee Central. </p>
+<p>Exceptions: Government Critical Vendors. Check below:</p>
+<p>• Non-Governmental Critical Vendor Onboard: Vendor Managers are responsible for sending the invitation to the 
+Vendors via Payee Central.  </p>
+<p>• Governmental Critical Vendor Onboard: Vendor Managers must fill NSQ Form and attach supporting offical 
+documentation.</p>
+<p>For more information, check LATAM Wiki  https://w.amazon.com/bin/view/Latam_Critical_Vendors_Guide/</p>
+<p>https://w.amazon.com/bin/view/Critical_vendor_creation/
+https://w.amazon.com/bin/view/Latam_Critical_Vendors_Guide/</p>
+<p>Other topics</p>
+<p>Confidential</p>
+<p>Other Vendor Onboarding Methods</p>
+<p>Confidential</p>
+<p>• What are the other methods &amp; systems used outside of Payee Central and when they are applicable</p>
+<p>NSQ – The NSQ process was in place before Payee Central rollout. It is still ONLY valid for NGO (Non Governmental</p>
+<p>Organizations) and Public Sector payments (such as Critical Vendors). DO NOT set up a regular vendor creation via
+NSQ.</p>
+<p>NSQ Form &amp; Instructions: https://inside.amazon.com/en/services/finance/accountspayable/Pages/NSQ.aspx  </p>
+<p>Contracting with NGOs: https://legal.amazon.com/sites/LegalTeams/InternationalConsumerLegal/LiBra/Pages/ngos.aspx</p>
+<p>To request a Vendor Creation via NSQ, open a ticket in the following CTI:
+C – Accounts Payable – Vendor Maintenance
+T – Payee Set-up
+I – Payee Setup by NSQ – LATAM ---</p>
+<p>https://inside.amazon.com/en/services/finance/accountspayable/Pages/NSQ.aspx
+https://legal.amazon.com/sites/LegalTeams/InternationalConsumerLegal/LiBra/Pages/ngos.aspx</p>
+<p>Importation of Services </p>
+<p>Before placing an importation order, be aware of:</p>
+<ul>
+<li>
+<p>Taxation rules based on the destination country</p>
+</li>
+<li>
+<p>Withholding Tax rules by country</p>
+</li>
+<li>
+<p>COUPA / SC.OS/Cloudforge Purchase Order placement requirements </p>
+</li>
+<li>
+<p>The PO currency MUST match the invoice currency</p>
+</li>
+</ul>
+<p>https://policy.amazon.com/procedure/8314 </p>
+<p>https://policy.amazon.com/procedure/8314</p>
+<pre><code>Slide 1: Amazon Corporate Procure-to-Pay 
+Slide 2
+Slide 3
+Slide 4: NEED TO BUY ON BEHALF OF AMAZON BRAZIL?
+Slide 5
+Slide 6
+Slide 7
+Slide 8
+Slide 9: NOW LET’S START!
+Slide 10
+Slide 11
+Slide 12
+Slide 13: Vendor Onboard
+Slide 14
+Slide 15
+Slide 16
+Slide 17: Purchase Order (PO)
+Slide 18
+Slide 19
+Slide 20
+Slide 21
+Slide 22: Vendor Invoicing
+Slide 23
+Slide 24: Confirmation, Approval and Payment
+Slide 25
+Slide 26
+Slide 27
+Slide 28
+Slide 29
+Slide 30: THANK YOU
+Slide 31: Most Common PO Issues and How to Solve
+Slide 32
+Slide 33
+Slide 34
+Slide 35
+Slide 36
+Slide 37
+Slide 38
+Slide 39
+Slide 40
+Slide 41
+Slide 42
+Slide 43
+Slide 44: Critical Vendors
+Slide 45
+Slide 46
+Slide 47: Other topics
+Slide 48
+Slide 49
+</code></pre>
+<h2 id="2025-08-23t043407185018z-tool">2025-08-23T04:34:07.185018Z — tool</h2>
+<p>All the files uploaded by the user have been fully loaded. Searching won't provide additional information.</p>
+<h2 id="2025-08-23t043407227721z-assistant">2025-08-23T04:34:07.227721Z — assistant</h2>
+<h2 id="2025-08-23t043407918838z-assistant">2025-08-23T04:34:07.918838Z — assistant</h2>
+<h2 id="2025-08-23t043415543817z-assistant">2025-08-23T04:34:15.543817Z — assistant</h2>
+<h2 id="2025-08-23t043539451000z-user">2025-08-23T04:35:39.451000Z — user</h2>
+<p>I'm just wondering why it was sent to me through microsoft teams</p>
+<h2 id="2025-08-23t043539881640z-system">2025-08-23T04:35:39.881640Z — system</h2>
+<h2 id="2025-08-23t043539905649z-assistant">2025-08-23T04:35:39.905649Z — assistant</h2>
+<p>That training deck most likely came through Microsoft Teams because Amazon (and a lot of big enterprises) push out <strong>mandatory compliance and process refreshers</strong> using Teams as the broadcast channel.  </p>
+<p>Here’s why it would land with you:</p>
+<ul>
+<li><strong>Role-based targeting</strong> – Since you’re in RME/PMO/WHS, you fall into a group that sometimes needs to understand <em>corporate procure-to-pay</em> rules (even if you don’t directly raise POs every day). They’ll push the training file to everyone in that org or cost center through Teams.  </li>
+<li><strong>Distribution efficiency</strong> – Teams is often used as a broadcast hub for decks that aren’t tracked in official LMS (like Embark/Learn). It gets around email bloat and ensures you at least <em>see</em> the file.  </li>
+<li><strong>Audit trail</strong> – Sending through Teams (and storing the file in the channel) creates a lightweight record that “training was provided” in case Finance or Legal ever audits.  </li>
+<li><strong>Cross-functional exposure</strong> – You may not be an AP person, but knowing how <strong>POs, receipts, and services approvals</strong> work matters if you ever touch Coupa/Cloudforge, interact with vendors, or request capital/parts.  </li>
+</ul>
+<p>So in short: it wasn’t random—it’s <strong>pushed broadly so you know the guardrails</strong>, even if you won’t use every detail daily.  </p>
+<p>👉 Do you want me to strip that big deck into just the <strong>pieces actually relevant to an RME Tech 2 / Ops support role</strong> so you don’t drown in finance jargon? That way, you’d know exactly why <em>you</em> were looped in.</p>
+<h2 id="2025-08-23t043540004798z-system">2025-08-23T04:35:40.004798Z — system</h2>
+</body>
+</html>

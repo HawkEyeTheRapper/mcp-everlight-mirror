@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SSH Config GitHub Droplet</title>
+<style id="everlight-nav-style">
+      .everlight-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(127,127,127,.3);
+        font-family: system-ui, sans-serif;
+      }
+      .everlight-nav a {
+        text-decoration: none;
+        font-weight: 600;
+        opacity: .9;
+      }
+      .everlight-nav a:hover {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    </style>
+</head>
+<body>
+<nav class="everlight-nav">
+  <a class="prev" href="SSH config fix.html">⟵ Previous</a>
+  <a class="index" href="index.html">🏠 Index</a>
+  <a class="next" href="SSH Config Setup.html">Next ⟶</a>
+</nav>
+<hr />
+<p>conversation_id: "67fe72bf-a65c-8011-b2ae-de0626dc0993"
+title: "SSH Config GitHub Droplet"
+accounts: ["Account2_exports"]
+models: []
+tags: []
+message_count: 12</p>
+<hr />
+<h1 id="ssh-config-github-droplet">SSH Config GitHub Droplet</h1>
+<h2 id="system">— system</h2>
+<h2 id="2025-04-15t145247015830z-user">2025-04-15T14:52:47.015830Z — user</h2>
+<p>How do I create a config file ssh for my GitHub and my droplet?</p>
+<h2 id="2025-04-15t145248250186z-assistant">2025-04-15T14:52:48.250186Z — assistant</h2>
+<p>To create an SSH config file that allows you to easily connect to <strong>GitHub</strong> and your <strong>DigitalOcean Droplet</strong>, follow these steps:</p>
+<hr />
+<h3 id="step-1-opencreate-your-ssh-config-file">✅ Step 1: Open/Create Your SSH Config File</h3>
+<p>Open your SSH config file in a text editor:</p>
+<pre><code class="language-bash">nano ~/.ssh/config
+</code></pre>
+<p>If it doesn’t exist, this command will create it.</p>
+<hr />
+<h3 id="step-2-add-a-github-config-block">✅ Step 2: Add a GitHub Config Block</h3>
+<pre><code class="language-ssh"># GitHub SSH Config
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/github_rsa
+  IdentitiesOnly yes
+</code></pre>
+<blockquote>
+<p>Replace <code>~/.ssh/github_rsa</code> with the actual private key you use for GitHub (often named <code>id_rsa</code>, <code>id_ed25519</code>, or a custom name).</p>
+</blockquote>
+<hr />
+<h3 id="step-3-add-a-droplet-config-block">✅ Step 3: Add a Droplet Config Block</h3>
+<pre><code class="language-ssh"># DigitalOcean Droplet
+Host mydroplet
+  HostName 123.456.789.000  # Replace with your droplet’s IP
+  User root
+  IdentityFile ~/.ssh/do_rsa
+  IdentitiesOnly yes
+</code></pre>
+<blockquote>
+<p>Replace <code>123.456.789.000</code> with your droplet’s actual IP and <code>~/.ssh/do_rsa</code> with the correct private key file.</p>
+</blockquote>
+<hr />
+<h3 id="step-4-set-proper-permissions">✅ Step 4: Set Proper Permissions</h3>
+<p>Make sure your SSH config and key files are protected:</p>
+<pre><code class="language-bash">chmod 600 ~/.ssh/config
+chmod 600 ~/.ssh/*.rsa
+</code></pre>
+<hr />
+<h3 id="step-5-test-connections">✅ Step 5: Test Connections</h3>
+<ul>
+<li><strong>To test GitHub:</strong></li>
+</ul>
+<pre><code class="language-bash">ssh -T git@github.com
+</code></pre>
+<ul>
+<li><strong>To test your Droplet:</strong></li>
+</ul>
+<pre><code class="language-bash">ssh mydroplet
+</code></pre>
+<hr />
+<h3 id="bonus-using-multiple-github-accounts">🎯 Bonus: Using Multiple GitHub Accounts?</h3>
+<p>You can alias GitHub hosts like this:</p>
+<pre><code class="language-ssh">Host github-personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_personal
+
+Host github-work
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_work
+</code></pre>
+<p>Then use the appropriate one in your Git config:</p>
+<pre><code class="language-bash">git remote set-url origin git@github-personal:yourusername/yourrepo.git
+</code></pre>
+<hr />
+<p>Let me know if you want a script to generate those keys and set this all up!</p>
+<h2 id="2025-04-15t145259851473z-assistant">2025-04-15T14:52:59.851473Z — assistant</h2>
+<h2 id="2025-04-15t145407913578z-user">2025-04-15T14:54:07.913578Z — user</h2>
+<p>I just made a key named it githawk and then the pub file its githawk.pub and the keys are in /root/EverLight/ </p>
+<p>And it's rsa - I added it to GitHub as well but how do I make it register or whatever and use it via the config file or auth keys or whatever? </p>
+<h2 id="2025-04-15t145409161884z-assistant">2025-04-15T14:54:09.161884Z — assistant</h2>
+<p>Alright Hawk 🦅 let’s wire it all up so <code>githawk</code> becomes your go-to GitHub key. Here's how to <strong>register</strong> and <strong>activate</strong> it step by step:</p>
+<hr />
+<h2 id="step-by-step-use-githawk-for-github-ssh-access">🔧 Step-by-Step: Use <code>githawk</code> for GitHub SSH Access</h2>
+<h3 id="1-move-your-keys-to-ssh-optional-but-recommended">✅ 1. <strong>Move Your Keys to <code>~/.ssh/</code> (Optional but Recommended)</strong></h3>
+<pre><code class="language-bash">mkdir -p ~/.ssh
+cp /root/EverLight/githawk ~/.ssh/githawk
+cp /root/EverLight/githawk.pub ~/.ssh/githawk.pub
+chmod 600 ~/.ssh/githawk
+chmod 644 ~/.ssh/githawk.pub
+</code></pre>
+<blockquote>
+<p>You can technically leave them in <code>/root/EverLight</code>, but SSH expects keys in <code>~/.ssh/</code> and it’s just cleaner + safer.</p>
+</blockquote>
+<hr />
+<h3 id="2-edit-your-ssh-config-file">✅ 2. <strong>Edit Your SSH Config File</strong></h3>
+<pre><code class="language-bash">nano ~/.ssh/config
+</code></pre>
+<p>Add this block:</p>
+<pre><code class="language-ssh"># GitHub with githawk key
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/githawk
+  IdentitiesOnly yes
+</code></pre>
+<p>💡 This tells SSH: “when I connect to github.com, use this specific private key.”</p>
+<hr />
+<h3 id="3-test-the-connection">✅ 3. <strong>Test the Connection</strong></h3>
+<pre><code class="language-bash">ssh -T git@github.com
+</code></pre>
+<p>If it worked, you’ll see:</p>
+<pre><code>Hi &lt;yourusername&gt;! You've successfully authenticated, but GitHub does not provide shell access.
+</code></pre>
+<p>If you see something like <strong>"permission denied"</strong>, run with verbose output to debug:</p>
+<pre><code class="language-bash">ssh -vT git@github.com
+</code></pre>
+<hr />
+<h3 id="4-set-git-to-use-ssh-optional-reminder">✅ 4. <strong>Set Git to Use SSH (Optional Reminder)</strong></h3>
+<p>If your repo remote uses HTTPS, convert it to SSH:</p>
+<pre><code class="language-bash">git remote set-url origin git@github.com:YourUsername/YourRepo.git
+</code></pre>
+<p>Or when cloning:</p>
+<pre><code class="language-bash">git clone git@github.com:YourUsername/YourRepo.git
+</code></pre>
+<hr />
+<h3 id="5-optional-add-ssh-key-to-agent-for-session-use">✅ 5. <strong>(Optional)</strong> Add SSH Key to Agent for Session Use</h3>
+<pre><code class="language-bash">eval &quot;$(ssh-agent -s)&quot;
+ssh-add ~/.ssh/githawk
+</code></pre>
+<p>If you want that to happen automatically at login, let me know and I’ll give you a one-liner for your shell profile (e.g., <code>.bashrc</code>, <code>.zshrc</code>, etc).</p>
+<hr />
+<p>All good? Want to set this up for your Droplet too while we’re on it?</p>
+<h2 id="2025-04-15t145521116105z-user">2025-04-15T14:55:21.116105Z — user</h2>
+<p>Also it's got a password as well - where do I put that in the config</p>
+<p>Also this is a key I'm creating on my droplet to connect it to my github</p>
+<h2 id="2025-04-15t145521799568z-assistant">2025-04-15T14:55:21.799568Z — assistant</h2>
+<p>Aha, got it! You're creating the <code>githawk</code> key <strong>on your droplet</strong> so the droplet can <strong>connect to GitHub via SSH</strong> — perfect. And since it's a <strong>password-protected private key</strong>, here’s what you need to know:</p>
+<hr />
+<h2 id="quick-truth-bomb-ssh-config-files-dont-store-passwords">🔐 Quick Truth Bomb: SSH Config Files Don't Store Passwords</h2>
+<p>You <strong>don’t</strong> and <strong>shouldn’t</strong> put your SSH key <strong>password</strong> in the <code>~/.ssh/config</code> file. SSH will <strong>prompt you for the passphrase</strong> each time you use the key — unless you load it into an <strong>SSH agent</strong>.</p>
+<p>So, here's how to handle it cleanly:</p>
+<hr />
+<h2 id="final-setup-plan-droplet-github-with-passphrase-protected-key">✅ Final Setup Plan (Droplet → GitHub with passphrase-protected key)</h2>
+<h3 id="1-ssh-config-entry-on-your-droplet">1. SSH Config Entry (On Your Droplet)</h3>
+<p>Edit or create:</p>
+<pre><code class="language-bash">nano ~/.ssh/config
+</code></pre>
+<p>Add:</p>
+<pre><code class="language-ssh">Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/githawk
+  IdentitiesOnly yes
+</code></pre>
+<hr />
+<h3 id="2-use-the-ssh-agent-to-avoid-repeating-passphrase-prompts">2. Use the SSH Agent to Avoid Repeating Passphrase Prompts</h3>
+<p>Start the agent and load your key:</p>
+<pre><code class="language-bash">eval &quot;$(ssh-agent -s)&quot;
+ssh-add ~/.ssh/githawk
+</code></pre>
+<p>🚨 You’ll be prompted for your <strong>passphrase once</strong>, and then it’s cached in memory for that session.</p>
+<p>If you want this to happen <strong>automatically on boot</strong>, you can add it to your <code>.bashrc</code>, <code>.bash_profile</code>, or <code>.zshrc</code>:</p>
+<pre><code class="language-bash"># Add this to your ~/.bashrc or ~/.zshrc on the droplet
+eval &quot;$(ssh-agent -s)&quot;
+ssh-add ~/.ssh/githawk &lt; /dev/null
+</code></pre>
+<blockquote>
+<p>The <code>&lt; /dev/null</code> part avoids it hanging on boot if it tries to prompt interactively.</p>
+</blockquote>
+<hr />
+<h3 id="3-test-it">3. Test It</h3>
+<pre><code class="language-bash">ssh -T git@github.com
+</code></pre>
+<p>Should say:</p>
+<pre><code>Hi hawk-eye! You've successfully authenticated, but GitHub does not provide shell access.
+</code></pre>
+<hr />
+<h3 id="bonus-set-global-git-identity-if-not-yet">💡 Bonus: Set Global Git Identity (If Not Yet)</h3>
+<pre><code class="language-bash">git config --global user.name &quot;Ethan Womack&quot;
+git config --global user.email &quot;your@email.com&quot;
+</code></pre>
+<hr />
+<p>Let me know if you want a script to automate the whole droplet setup (key gen, config, SSH agent preload, Git identity, etc). Would be clean.</p>
+<h2 id="2025-04-15t145555267013z-user">2025-04-15T14:55:55.267013Z — user</h2>
+<p>Do I put my githuv username in?</p>
+<h2 id="2025-04-15t145555956070z-assistant">2025-04-15T14:55:55.956070Z — assistant</h2>
+<p>Great question — and surprisingly, <strong>no</strong>, you don’t need to put your <strong>GitHub username</strong> in the SSH config!</p>
+<hr />
+<h2 id="tldr">✅ TL;DR:</h2>
+<p>When using SSH with GitHub:</p>
+<ul>
+<li>The <strong>SSH user is always</strong> <code>git</code></li>
+<li>You <strong>do not</strong> put your GitHub username in the SSH config</li>
+<li>Your <strong>username is handled automatically</strong> through the SSH key GitHub recognizes (the one you uploaded to GitHub)</li>
+</ul>
+<hr />
+<h2 id="your-sshconfig-entry-correct">🛠 Your <code>~/.ssh/config</code> Entry (Correct)</h2>
+<pre><code class="language-ssh">Host github.com
+  HostName github.com
+  User git                # ← always this!
+  IdentityFile ~/.ssh/githawk
+  IdentitiesOnly yes
+</code></pre>
+<p>When you run:</p>
+<pre><code class="language-bash">ssh -T git@github.com
+</code></pre>
+<p>GitHub will say:</p>
+<pre><code>Hi &lt;your-github-username&gt;! You've successfully authenticated...
+</code></pre>
+<p>Because it's matching your key to the account you added it to.</p>
+<hr />
+<h2 id="want-to-use-multiple-github-accounts">🧠 Want to Use Multiple GitHub Accounts?</h2>
+<p>Then you'd alias the host with something like:</p>
+<pre><code class="language-ssh">Host github-work
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/githawk_work
+
+Host github-personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/githawk_personal
+</code></pre>
+<p>Then clone using:</p>
+<pre><code class="language-bash">git clone git@github-work:YourUsername/YourRepo.git
+</code></pre>
+<hr />
+<p>Let me know if you want to make a custom host like <code>github-hawkeye</code> just for flavor. 😎</p>
+<h2 id="2025-04-15t145627651340z-user">2025-04-15T14:56:27.651340Z — user</h2>
+<p>Do I move my ssh key files into ~/.ssh/ or leave where it is?</p>
+<h2 id="2025-04-15t145628381958z-assistant">2025-04-15T14:56:28.381958Z — assistant</h2>
+<p>Excellent question — and here's the real talk:</p>
+<hr />
+<h2 id="recommended-move-your-key-files-to-ssh">✅ Recommended: Move Your Key Files to <code>~/.ssh/</code></h2>
+<h3 id="why">Why?</h3>
+<ul>
+<li>SSH <strong>automatically looks</strong> in <code>~/.ssh/</code></li>
+<li>It’s the <strong>standard and secure location</strong> for key management</li>
+<li>Many tools (like <code>ssh-add</code>, Git, or even deployment scripts) <strong>assume keys are there</strong></li>
+<li>Keeps your system tidy and portable</li>
+</ul>
+<hr />
+<h3 id="heres-how-to-move-and-secure-them">🧰 Here's How to Move and Secure Them:</h3>
+<pre><code class="language-bash">mkdir -p ~/.ssh
+cp /root/EverLight/githawk ~/.ssh/githawk
+cp /root/EverLight/githawk.pub ~/.ssh/githawk.pub
+
+chmod 600 ~/.ssh/githawk
+chmod 644 ~/.ssh/githawk.pub
+</code></pre>
+<p>And don’t forget to update your <code>~/.ssh/config</code> to point to the new location:</p>
+<pre><code class="language-ssh">Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/githawk
+  IdentitiesOnly yes
+</code></pre>
+<hr />
+<h3 id="want-to-be-extra">😎 Want to be extra?</h3>
+<p>Once confirmed working, clean up the original location:</p>
+<pre><code class="language-bash">rm /root/EverLight/githawk
+rm /root/EverLight/githawk.pub
+</code></pre>
+<p>Let me know if you want a script to automate the move + permissions + config edit. I gotchu.</p>
+</body>
+</html>

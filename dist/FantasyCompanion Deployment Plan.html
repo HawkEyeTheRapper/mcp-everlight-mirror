@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FantasyCompanion Deployment Plan</title>
+<style id="everlight-nav-style">
+      .everlight-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(127,127,127,.3);
+        font-family: system-ui, sans-serif;
+      }
+      .everlight-nav a {
+        text-decoration: none;
+        font-weight: 600;
+        opacity: .9;
+      }
+      .everlight-nav a:hover {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    </style>
+</head>
+<body>
+<nav class="everlight-nav">
+  <a class="prev" href="Family Inheritance Dispute Assistance.html">⟵ Previous</a>
+  <a class="index" href="index.html">🏠 Index</a>
+  <a class="next" href="Fate and Familiar Roads.html">Next ⟶</a>
+</nav>
+<hr />
+<p>conversation_id: "683fbf7c-3960-8011-ab24-5eaaeb52c5bb"
+title: "FantasyCompanion Deployment Plan"
+accounts: ["Account2_exports"]
+models: []
+tags: []
+message_count: 13</p>
+<hr />
+<h1 id="fantasycompanion-deployment-plan">FantasyCompanion Deployment Plan</h1>
+<h2 id="system">— system</h2>
+<h2 id="2025-06-04t033731778478z-user">2025-06-04T03:37:31.778478Z — user</h2>
+<p>Can you extract all of these and help me lay out a play to deploy them each to a proper domain that we own via the server later when I fix it and plug it back in to the internet?</p>
+<h2 id="2025-06-04t033733009006z-system">2025-06-04T03:37:33.009006Z — system</h2>
+<h2 id="2025-06-04t033733451798z-assistant">2025-06-04T03:37:33.451798Z — assistant</h2>
+<h2 id="2025-06-04t033744151550z-tool">2025-06-04T03:37:44.151550Z — tool</h2>
+<h2 id="2025-06-04t033744841236z-assistant">2025-06-04T03:37:44.841236Z — assistant</h2>
+<h2 id="2025-06-04t033745344734z-assistant">2025-06-04T03:37:45.344734Z — assistant</h2>
+<h2 id="2025-06-04t033750778260z-tool">2025-06-04T03:37:50.778260Z — tool</h2>
+<h2 id="2025-06-04t033751566324z-assistant">2025-06-04T03:37:51.566324Z — assistant</h2>
+<p>The archive contains a single major project: <strong>FantasyCompanion</strong>, which is a full-stack application with the following structure:</p>
+<h3 id="fantasycompanion-project-structure">📦 FantasyCompanion Project Structure</h3>
+<ul>
+<li><strong>client/</strong> – Frontend built using Vite + TypeScript + Tailwind (includes modular UI components)</li>
+<li><strong>server/</strong> – Backend logic (<code>db.ts</code>, <code>routes.ts</code>, <code>index.ts</code>, etc.)</li>
+<li><strong>shared/</strong> – Shared code like schema definitions</li>
+<li><strong>attached_assets/</strong> – Media files, bundles, and designs (includes <code>.zip</code>, <code>.webp</code>, <code>.png</code>)</li>
+<li><strong>deployment configs</strong> – Files like:</li>
+<li><code>DEPLOYMENT.md</code></li>
+<li><code>deploy.sh</code></li>
+<li><code>ecosystem.config.js</code></li>
+<li><code>nginx.conf</code></li>
+<li><strong>other config</strong> – Tailwind, Vite, PostCSS, tsconfig, and package files</li>
+</ul>
+<hr />
+<h2 id="deployment-plan-fantasycompanion">✅ Deployment Plan (FantasyCompanion)</h2>
+<h3 id="1-target-domain-suggestion">1. <strong>Target Domain Suggestion</strong></h3>
+<p>Let’s deploy this project to:</p>
+<pre><code>fantasy.omniversal.media
+</code></pre>
+<p>Or choose one of your other owned domains that fits the theme.</p>
+<hr />
+<h3 id="2-deployment-strategy-post-server-reconnect">2. <strong>Deployment Strategy (Post-Server-Reconnect)</strong></h3>
+<h4 id="prerequisites">🔧 <strong>Prerequisites</strong></h4>
+<p>Ensure your server is reconnected and has the following installed:
+- Node.js (v18+)
+- pm2 (for daemonizing with <code>ecosystem.config.js</code>)
+- nginx (reverse proxy, as configured in <code>nginx.conf</code>)
+- PostgreSQL or any required DB (if needed by <code>drizzle.config.ts</code>)
+- Rclone (optional for syncing <code>attached_assets</code>)</p>
+<hr />
+<h3 id="3-steps-to-deploy">3. <strong>Steps to Deploy</strong></h3>
+<pre><code class="language-bash"># SSH into your server
+ssh user@your-server-ip
+
+# Navigate to your deployment directory
+cd /var/www/
+
+# Clone or copy project files
+cp -r /path/to/FantasyCompanion .
+
+# Move into project directory
+cd FantasyCompanion
+
+# Install dependencies
+npm install
+
+# Build the frontend
+npm run build
+
+# Launch with pm2 using ecosystem.config.js
+pm2 start ecosystem.config.js
+
+# Set up NGINX (assuming config is in nginx.conf)
+sudo cp nginx.conf /etc/nginx/sites-available/fantasy
+sudo ln -s /etc/nginx/sites-available/fantasy /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
+</code></pre>
+<hr />
+<h3 id="4-domain-setup">4. <strong>Domain Setup</strong></h3>
+<p>In your domain registrar or Cloudflare dashboard:
+- Point <code>fantasy.omniversal.media</code> (or chosen subdomain) to your server’s IP.
+- Use an A record or CNAME depending on DNS provider.
+- Optionally, enable HTTPS via Let's Encrypt or Cloudflare SSL.</p>
+<hr />
+<p>Would you like me to prepare:
+- An install script for automation?
+- A separate playbook file or PDF for printing?
+- And do you plan to host other Replit exports alongside this, or is this a one-app-per-domain plan?</p>
+<p>Let me know and I’ll scaffold the rest.</p>
+<h2 id="2025-06-04t034136491433z-user">2025-06-04T03:41:36.491433Z — user</h2>
+<h2 id="2025-06-04t034139404748z-assistant">2025-06-04T03:41:39.404748Z — assistant</h2>
+<h2 id="2025-06-04t034145917114z-tool">2025-06-04T03:41:45.917114Z — tool</h2>
+<h2 id="2025-06-04t034146694797z-assistant">2025-06-04T03:41:46.694797Z — assistant</h2>
+<p>Here are the markdown deployment-related files you just uploaded:</p>
+<ol>
+<li><code>final-deployment-instructions.md</code></li>
+<li><code>EDITING_GUIDE.md</code></li>
+<li><code>deployment-steps.md</code></li>
+<li><code>deployment-config.md</code></li>
+<li><code>DEPLOYMENT_READY.md</code></li>
+</ol>
+<p>Would you like me to:
+- Summarize each of these?
+- Merge them into a single deployment playbook?
+- Tailor their contents for specific domains like <code>fantasy.omniversal.media</code>?
+- Convert them to PDF for print/export?</p>
+<p>Let me know your preference and I’ll get it ready.</p>
+</body>
+</html>

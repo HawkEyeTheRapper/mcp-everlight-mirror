@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Server TV Issue Help</title>
+<style id="everlight-nav-style">
+      .everlight-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(127,127,127,.3);
+        font-family: system-ui, sans-serif;
+      }
+      .everlight-nav a {
+        text-decoration: none;
+        font-weight: 600;
+        opacity: .9;
+      }
+      .everlight-nav a:hover {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    </style>
+</head>
+<body>
+<nav class="everlight-nav">
+  <a class="prev" href="Server File Migration Guide.html">⟵ Previous</a>
+  <a class="index" href="index.html">🏠 Index</a>
+  <a class="next" href="Set GH Token.html">Next ⟶</a>
+</nav>
+<hr />
+<p>conversation_id: "684ce2ed-05ec-8011-9661-850b1d9a602d"
+title: "Server TV Issue Help"
+accounts: ["Account2_exports"]
+models: []
+tags: []
+message_count: 13</p>
+<hr />
+<h1 id="server-tv-issue-help">Server TV Issue Help</h1>
+<h2 id="system">— system</h2>
+<h2 id="user">— user</h2>
+<h2 id="2025-06-14t024812672736z-user">2025-06-14T02:48:12.672736Z — user</h2>
+<p>Sorry I tried plugging this server back in to the tv again and it’s just being a whole pain </p>
+<h2 id="2025-06-14t024814178500z-assistant">2025-06-14T02:48:14.178500Z — assistant</h2>
+<p>No worries — servers always seem to act up <em>right</em> when you need them most. Let's triage this and get you back on track.</p>
+<p>Just shoot me a quick rundown of what exactly it’s doing (or not doing), such as:</p>
+<ul>
+<li>Does anything appear on screen when you power it up?</li>
+<li>Are there any blinking lights or beep codes?</li>
+<li>Does the TV detect any signal (even if it's black)?</li>
+<li>HDMI or VGA? Any adapters involved?</li>
+<li>Is the server booting at all — like, do you hear fans or drives spinning up?</li>
+</ul>
+<p>Even if it’s just “nothing happens,” that’s still a clue. I’ll walk you through from there.</p>
+<h2 id="2025-06-14t024817228083z-assistant">2025-06-14T02:48:17.228083Z — assistant</h2>
+<h2 id="2025-06-14t024953435792z-user">2025-06-14T02:49:53.435792Z — user</h2>
+<p>What’s my autoinstall.yaml url?</p>
+<h2 id="2025-06-14t024953904886z-assistant">2025-06-14T02:49:53.904886Z — assistant</h2>
+<p>To give you the correct <code>autoinstall.yaml</code> URL, I’ll need to know where you're hosting the file — it depends on your setup.</p>
+<p>Here are a few common cases and how you'd format the URL:</p>
+<hr />
+<h3 id="1-if-its-hosted-on-your-own-cloudflare-r2-bucket-or-s3-static-site">✅ <strong>1. If it's hosted on your own Cloudflare R2 bucket or S3 static site</strong></h3>
+<p>Let’s say your domain is:</p>
+<pre><code>https://womack.beneaththesurface.net/
+</code></pre>
+<p>And you uploaded the file as:</p>
+<pre><code>autoinstall.yaml
+</code></pre>
+<p>Then the full URL would be:</p>
+<pre><code>https://womack.beneaththesurface.net/autoinstall.yaml
+</code></pre>
+<hr />
+<h3 id="2-if-its-on-github-raw-file">✅ <strong>2. If it's on GitHub (raw file)</strong></h3>
+<p>If your file is in a public repo like:</p>
+<pre><code>https://github.com/HawkEyeTheRapper/ServerSetup/blob/main/autoinstall.yaml
+</code></pre>
+<p>Then the raw file URL would be:</p>
+<pre><code>https://raw.githubusercontent.com/HawkEyeTheRapper/ServerSetup/main/autoinstall.yaml
+</code></pre>
+<p>Use <strong>this one</strong> during the Ubuntu install process — not the GitHub UI one.</p>
+<hr />
+<h3 id="3-if-youre-hosting-it-locally-on-the-network-with-a-web-server-eg-python-httpserver-or-nginx">✅ <strong>3. If you're hosting it locally on the network with a web server (e.g., Python http.server or nginx)</strong></h3>
+<p>Then the URL might be something like:</p>
+<pre><code>http://192.168.1.100:8000/autoinstall.yaml
+</code></pre>
+<p>You’d need to serve the directory it's in and make sure the server is reachable over LAN.</p>
+<hr />
+<h3 id="during-ubuntu-install">✅ <strong>During Ubuntu Install</strong></h3>
+<p>When Ubuntu asks for the autoinstall source, you’d paste one of the above URLs. Example:</p>
+<pre><code>autoinstall   ds=nocloud-net;s=https://womack.beneaththesurface.net/
+</code></pre>
+<p>Or specify it like:</p>
+<pre><code>ds=nocloud-net;s=https://raw.githubusercontent.com/HawkEyeTheRapper/ServerSetup/main/
+</code></pre>
+<p>Ubuntu will then fetch <code>autoinstall.yaml</code> from that directory.</p>
+<hr />
+<p>Want me to check your active bucket or GitHub to confirm the real link for your setup? Just tell me where the file currently lives (or drop it here), and I’ll pinpoint it.</p>
+<h2 id="2025-06-14t025017653331z-user">2025-06-14T02:50:17.653331Z — user</h2>
+<p>Oh I’m not hosting it I just don’t wanna wait on this again</p>
+<h2 id="2025-06-14t025018179552z-assistant">2025-06-14T02:50:18.179552Z — assistant</h2>
+<p>Ahh, got it — you’re in the middle of replugging the server and don’t want to sit through a long Ubuntu install <em>again</em>. Totally fair. Here’s how you can skip the manual parts <em>without needing to host your own <code>autoinstall.yaml</code> right now</em>:</p>
+<hr />
+<h3 id="option-1-use-ubuntus-built-in-minimal-autoinstall-offline">🔁 <strong>Option 1: Use Ubuntu’s built-in minimal autoinstall (offline)</strong></h3>
+<p>If you’re using a recent Ubuntu Server ISO (20.04.3+, 22.04+), and you just want to bypass prompts quickly:</p>
+<ol>
+<li>Boot the installer.</li>
+<li>At the GRUB boot screen, press <code>e</code> to edit the boot parameters.</li>
+<li>Find the line that starts with <code>linux</code> and append this to the end:</li>
+</ol>
+<p><code>autoinstall ds=nocloud-net;s=file:///cdrom/nocloud/</code></p>
+<ol>
+<li>Press <code>Ctrl + X</code> or <code>F10</code> to boot.</li>
+</ol>
+<p>This looks for an <code>autoinstall.yaml</code> in a known location on the ISO — not ideal unless you've repacked the ISO yourself. But if you haven’t done that...</p>
+<hr />
+<h3 id="option-2-plug-in-a-usb-with-autoinstallyaml">⚡ <strong>Option 2: Plug in a USB with <code>autoinstall.yaml</code></strong></h3>
+<p>Much faster and more reliable — and <strong>you don’t need internet or to host anything</strong>.</p>
+<ol>
+<li>Create a USB drive.</li>
+<li>On it, create this folder structure:</li>
+</ol>
+<p><code>/nocloud/meta-data
+   /nocloud/user-data</code></p>
+<ol>
+<li>
+<p>Put your <code>autoinstall.yaml</code> in <code>user-data</code>. (Meta-data can be an empty file or contain hostname info.)</p>
+</li>
+<li>
+<p>When booting, use:</p>
+</li>
+</ol>
+<p><code>autoinstall ds=nocloud;s=/cdrom/nocloud/</code></p>
+<p>or</p>
+<p><code>ds=nocloud;s=/dev/sdX</code></p>
+<p>Replace <code>sdX</code> with your USB device identifier.</p>
+<hr />
+<h3 id="want-a-default-autoinstallyaml-you-can-use-now">🛠️ Want a default autoinstall.yaml you can use now?</h3>
+<p>If you just need a working sample to skip the prompts, here’s one for Ubuntu 22.04:</p>
+<pre><code class="language-yaml"># user-data
+autoinstall:
+  version: 1
+  identity:
+    hostname: aether-core
+    username: hawkeye
+    password: &quot;$6$rounds=4096$gXgNdApXjY9X...REPLACEME...&quot;  # Use `mkpasswd --method=SHA-512`
+  ssh:
+    install-server: true
+  storage:
+    layout:
+      name: direct
+  packages:
+    - openssh-server
+  late-commands:
+    - curtin in-target -- apt update
+    - curtin in-target -- apt install -y net-tools
+</code></pre>
+<p>Let me know if you want me to generate a secure password hash or customize this — I can instantly tailor one for your username, network settings, or postinstall commands.</p>
+<p>Want me to prep that USB image and instructions for you right now?</p>
+<h2 id="2025-06-14t030720494135z-user">2025-06-14T03:07:20.494135Z — user</h2>
+<p>What’s the ch mod command to fix whatever I did to break this thing again</p>
+<h2 id="2025-06-14t030721016760z-assistant">2025-06-14T03:07:21.016760Z — assistant</h2>
+<p>Let’s resurrect the beast. 😤 If something broke permissions-wise and the system won’t boot properly — or is acting weird after file edits — here’s a breakdown of <strong>common <code>chmod</code> fixes</strong> depending on what might’ve gone wrong.</p>
+<hr />
+<h2 id="1-fix-broken-home-directory-permissions">🛠️ 1. <strong>Fix broken home directory permissions</strong></h2>
+<p>If you accidentally ran <code>chmod -R 777 /</code> or similar, this can mess up critical system dirs.</p>
+<p>To just fix your home directory (<code>/home/hawkeye</code> or similar):</p>
+<pre><code class="language-bash">sudo chmod 700 /home/yourusername
+sudo chmod 600 /home/yourusername/.bashrc
+sudo chmod 755 /home/yourusername/Desktop
+</code></pre>
+<p>Replace <code>yourusername</code> with yours (likely <code>hawkeye</code>).</p>
+<hr />
+<h2 id="2-fix-boot-issues-caused-by-bad-perms-on">🛠️ 2. <strong>Fix boot issues caused by bad perms on <code>/</code></strong></h2>
+<p>If it won’t boot into GUI or login fails:</p>
+<pre><code class="language-bash">sudo chmod 755 /
+sudo chmod 755 /boot
+sudo chmod 755 /usr
+sudo chmod 755 /bin
+sudo chmod 755 /sbin
+sudo chmod 755 /lib
+sudo chmod 755 /lib64
+</code></pre>
+<p><strong>⚠️ Only run this if you know those dirs were chmod-ed incorrectly</strong>.</p>
+<hr />
+<h2 id="3-fix-sudoers-perms-very-common-mistake">🛠️ 3. <strong>Fix sudoers perms (very common mistake)</strong></h2>
+<p>If <code>sudo</code> gives you errors, this usually fixes it:</p>
+<pre><code class="language-bash">sudo chmod 440 /etc/sudoers
+sudo chmod 440 /etc/sudoers.d/*
+</code></pre>
+<hr />
+<h2 id="4-fix-scripts-or-services-that-wont-run">🛠️ 4. <strong>Fix scripts or services that won’t run</strong></h2>
+<p>If you have a script or executable that says “permission denied,” just:</p>
+<pre><code class="language-bash">chmod +x yourscript.sh
+</code></pre>
+<p>Or for systemd services:</p>
+<pre><code class="language-bash">chmod 644 /etc/systemd/system/your-service.service
+</code></pre>
+<hr />
+<h2 id="5-fix-everything-in-a-directory-back-to-safe-defaults">🧙‍♂️ 5. <strong>Fix everything in a directory back to “safe defaults”</strong></h2>
+<p>If you’re deep in <code>/var/www</code>, your home folder, or <code>/etc</code>, and want to reset perms:</p>
+<pre><code class="language-bash"># Directories = 755, Files = 644
+find . -type d -exec chmod 755 {} \;
+find . -type f -exec chmod 644 {} \;
+</code></pre>
+<hr />
+<h3 id="lets-double-check">🔁 Let’s double-check:</h3>
+<p>If you tell me:</p>
+<ul>
+<li>What folder you were working in</li>
+<li>What you ran last</li>
+<li>What error you’re seeing now</li>
+</ul>
+<p>…then I can tell you <strong>exactly</strong> what command to run to undo it.</p>
+<p>Otherwise, I’m just gonna keep giving you holy water and hoping it finds the demon 😅</p>
+<h2 id="2025-06-14t031348979273z-user">2025-06-14T03:13:48.979273Z — user</h2>
+<p>{"content_type": "image_asset_pointer", "asset_pointer": "file-service://file-18tRm984JRjG8qFwa8GLfx", "size_bytes": 3470287, "width": 1152, "height": 1536, "fovea": null, "metadata": {"dalle": null, "gizmo": null, "generation": null, "container_pixel_height": null, "container_pixel_width": null, "emu_omit_glimpse_image": null, "emu_patches_override": null, "lpe_keep_patch_ijhw": null, "sanitized": true, "asset_pointer_link": null, "watermarked_asset_pointer": null}}
+I think it’s have been root running commands meant for /mint permissions but i just hit /<em> instead of /mnt/</em> or something like that </p>
+<h2 id="2025-06-14t031350956828z-assistant">2025-06-14T03:13:50.956828Z — assistant</h2>
+<p>Ahhh yep — from what you’re describing and that terminal shot, <strong>it looks like you accidentally reset permissions on the whole system (<code>/*</code>) instead of just <code>/mnt/*</code></strong>.</p>
+<p>The two commands you ran:</p>
+<pre><code class="language-bash">find . -type d -exec chmod 755 {} \;
+find . -type f -exec chmod 644 {} \;
+</code></pre>
+<p>…from <code>/</code> as root would <strong>wreck system file permissions</strong> in a big way. You’re basically telling Linux to treat every directory as a public-readable web folder 😬 — which breaks tons of things like <code>sudo</code>, services, device files, and security protections.</p>
+<hr />
+<h2 id="dont-panic-heres-the-fix-plan">🔥 Don’t Panic. Here's the Fix Plan:</h2>
+<h3 id="1-youre-still-in-thats-good">✅ 1. <strong>You're still in. That's good.</strong></h3>
+<p>You're at least able to log in as <code>root</code>, meaning not everything is borked yet. That’s a miracle.</p>
+<hr />
+<h3 id="2-use-the-official-ubuntu-recovery-permission-reset-tool">🧼 2. <strong>Use the official Ubuntu recovery permission reset tool</strong></h3>
+<p>Ubuntu has a reference permissions database in <code>dpkg</code>. You can restore many default permissions like this:</p>
+<pre><code class="language-bash">dpkg --get-selections | awk '{print $1}' | while read pkg; do dpkg --audit $pkg; done
+</code></pre>
+<p>Or even better:</p>
+<pre><code class="language-bash">dpkg --get-selections | awk '{print $1}' | while read pkg; do dpkg --listfiles &quot;$pkg&quot; | xargs -d '\n' stat --format '%a %n'; done
+</code></pre>
+<p>But that’s messy — so here's <strong>a more surgical approach.</strong></p>
+<hr />
+<h3 id="3-fix-critical-system-permissions-manually">🧱 3. <strong>Fix critical system permissions manually</strong></h3>
+<p>Let’s run this batch to fix essentials:</p>
+<pre><code class="language-bash"># Fix sudo and login
+chmod 755 /
+chmod 755 /bin /boot /etc /home /lib /lib64 /opt /sbin /usr /var
+chmod 4755 /bin/su
+chmod 755 /usr/bin /usr/sbin /sbin /bin
+
+# Fix sudoers
+chmod 440 /etc/sudoers
+chmod 440 /etc/sudoers.d/*
+
+# Fix root's home
+chmod 700 /root
+chmod 600 /root/.bashrc
+chmod 600 /root/.profile
+
+# Fix TTY/terminals
+chmod 666 /dev/tty*
+chmod 666 /dev/null
+chmod 666 /dev/zero
+chmod 666 /dev/random
+chmod 666 /dev/urandom
+</code></pre>
+<p>You can copy/paste this whole block into the shell and press enter.</p>
+<hr />
+<h3 id="4-reinstall-base-packages-to-force-proper-perms">🛡️ 4. <strong>Reinstall base packages to force proper perms</strong></h3>
+<p>This will forcibly restore many system files to their original state:</p>
+<pre><code class="language-bash">sudo apt install --reinstall coreutils login sudo bash passwd
+</code></pre>
+<p>If any package is deeply broken, we can <code>chroot</code> into the install using a live USB and fix it from there.</p>
+<hr />
+<h3 id="5-do-a-fresh-reinstall-if-needed">📦 5. <strong>Do a fresh reinstall if needed</strong></h3>
+<p>If things start breaking in weird ways even after repair attempts (like networking, display manager, or file access), your fastest path may be:</p>
+<ul>
+<li>Save any <code>/mnt</code> files or data.</li>
+<li>Use autoinstall to rebuild Ubuntu.</li>
+<li>Restore your config safely.</li>
+</ul>
+<hr />
+<p>Want me to generate a fresh <code>autoinstall.yaml</code> for you right now with <code>openssh</code>, your user, and some recovery tools included?</p>
+<p>Or I can script the above repair steps as a one-liner. Let me know your preferred route. You're not sunk yet.</p>
+</body>
+</html>

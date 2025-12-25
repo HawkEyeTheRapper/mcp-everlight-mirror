@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RFID fault explanation</title>
+<style id="everlight-nav-style">
+      .everlight-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(127,127,127,.3);
+        font-family: system-ui, sans-serif;
+      }
+      .everlight-nav a {
+        text-decoration: none;
+        font-weight: 600;
+        opacity: .9;
+      }
+      .everlight-nav a:hover {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    </style>
+</head>
+<body>
+<nav class="everlight-nav">
+  <a class="prev" href="Review packet preparation.html">⟵ Previous</a>
+  <a class="index" href="index.html">🏠 Index</a>
+  <a class="next" href="Ride options and perspective.html">Next ⟶</a>
+</nav>
+<hr />
+<p>conversation_id: "68a95d4f-4bd4-8325-8eed-29527c70ec25"
+title: "RFID fault explanation"
+accounts: ["Account1_exports"]
+models: []
+tags: []
+message_count: 13</p>
+<hr />
+<h1 id="rfid-fault-explanation">RFID fault explanation</h1>
+<h2 id="user">— user</h2>
+<h2 id="system">— system</h2>
+<h2 id="system_1">— system</h2>
+<h2 id="2025-08-23t061918294367z-user">2025-08-23T06:19:18.294367Z — user</h2>
+<p>{"content_type": "image_asset_pointer", "asset_pointer": "file-service://file-1yWGwMDM4fcBQ5EKQciE4E", "size_bytes": 238174, "width": 2295, "height": 4080, "fovea": null, "metadata": {"dalle": null, "gizmo": null, "generation": null, "container_pixel_height": null, "container_pixel_width": null, "emu_omit_glimpse_image": null, "emu_patches_override": null, "lpe_keep_patch_ijhw": null, "sanitized": true, "asset_pointer_link": null, "watermarked_asset_pointer": null}}</p>
+<h2 id="2025-08-23t061918390431z-assistant">2025-08-23T06:19:18.390431Z — assistant</h2>
+<h2 id="2025-08-23t061918434235z-assistant">2025-08-23T06:19:18.434235Z — assistant</h2>
+<p>I see the assessment question on your screen:  </p>
+<p><strong>“Why would reading an RFID tag return a fault?”</strong></p>
+<p>The two options shown are basically duplicates, just worded slightly differently:</p>
+<ol>
+<li><em>If the tag is damaged, the HMI will return a fault that the…</em>  </li>
+<li><em>If the tag is damaged, the HMI will return a fault that there…</em></li>
+</ol>
+<hr />
+<p>✅ The correct idea here is:<br />
+If the <strong>RFID tag is damaged</strong>, the <strong>HMI (Human Machine Interface)</strong> won’t be able to read the data properly, so it <strong>returns a fault</strong>.  </p>
+<p>So the right answer is the one that clearly states that <em>a damaged tag causes the HMI to return a fault</em>.  </p>
+<hr />
+<p>Do you want me to give you a quick cheat-sheet style explanation for RFID fault scenarios (like <em>damaged tag, misaligned tag, interference, or wrong programming</em>) so you can answer these TAC test questions faster without second-guessing?</p>
+<h2 id="2025-08-23t061918570703z-system">2025-08-23T06:19:18.570703Z — system</h2>
+<h2 id="2025-08-23t061938506110z-user">2025-08-23T06:19:38.506110Z — user</h2>
+<p>{"content_type": "image_asset_pointer", "asset_pointer": "file-service://file-KtjvXvwiYC6Ee2mTSQTPaj", "size_bytes": 243473, "width": 2295, "height": 4080, "fovea": null, "metadata": {"dalle": null, "gizmo": null, "generation": null, "container_pixel_height": null, "container_pixel_width": null, "emu_omit_glimpse_image": null, "emu_patches_override": null, "lpe_keep_patch_ijhw": null, "sanitized": true, "asset_pointer_link": null, "watermarked_asset_pointer": null}}</p>
+<h2 id="2025-08-23t061938649906z-assistant">2025-08-23T06:19:38.649906Z — assistant</h2>
+<p>I see your TAC 201 module question:  </p>
+<p><strong>“How do you read a tag on the path?”</strong></p>
+<p>Both options look almost identical, but there’s one key difference:  </p>
+<ul>
+<li>
+<p><strong>First option (the one you selected):</strong>  </p>
+<blockquote>
+<p>“…look for the yellow <em>‘read’</em> light on the reader. <strong>If the yellow light does not come on, the tag is unreadable.</strong>”</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Second option:</strong>  </p>
+<blockquote>
+<p>“…look for the yellow <em>‘read’</em> light on the reader. <strong>If the yellow light comes on, the tag is unreadable.</strong>”</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<p>✅ The <strong>first option</strong> is correct.<br />
+When scanning an RFID tag, the yellow read light should turn on to confirm the tag is readable. If it <strong>doesn’t</strong> come on, the tag is bad/unreadable.  </p>
+<p>The second option is a trick statement because it flips the logic — saying the yellow light <em>coming on</em> means it’s unreadable, which is wrong.  </p>
+<hr />
+<p>Do you want me to put together a <strong>step-by-step “RFID Reader Process Cheat Sheet”</strong> (like a 5-step checklist: power, alignment, read light, tag validity, HMI confirmation) so you can breeze through all of these TAC RFID questions without hesitation?</p>
+<h2 id="2025-08-23t061958300928z-user">2025-08-23T06:19:58.300928Z — user</h2>
+<p>{"content_type": "image_asset_pointer", "asset_pointer": "file-service://file-2Ne6yPzZi7xCLn9KijLWDy", "size_bytes": 239531, "width": 2295, "height": 4080, "fovea": null, "metadata": {"dalle": null, "gizmo": null, "generation": null, "container_pixel_height": null, "container_pixel_width": null, "emu_omit_glimpse_image": null, "emu_patches_override": null, "lpe_keep_patch_ijhw": null, "sanitized": true, "asset_pointer_link": null, "watermarked_asset_pointer": null}}</p>
+<h2 id="2025-08-23t061958785704z-assistant">2025-08-23T06:19:58.785704Z — assistant</h2>
+<p>Good shot of the screen — the question is:  </p>
+<p><strong>“What is an 999 tag used for?”</strong></p>
+<p>You’ve got two choices:</p>
+<ol>
+<li>
+<p><strong>First option:</strong>  </p>
+<blockquote>
+<p>“…will immediately display an alert on the HMI screen so that it may be manually stopped.”  </p>
+</blockquote>
+</li>
+<li>
+<p><strong>Second option (the one you selected):</strong>  </p>
+<blockquote>
+<p>“…will fault and stop immediately.”  </p>
+</blockquote>
+</li>
+</ol>
+<hr />
+<p>✅ The <strong>correct answer is the second one.</strong><br />
+A <strong>999 tag</strong> is essentially a <em>safety stop tag</em>. When the AGC (Automatic Guided Cart) reads it — usually because it’s gone down the wrong path or been placed back incorrectly — the AGC will <strong>immediately fault and stop</strong> to prevent collisions or unsafe operation.  </p>
+<p>The first option is a trick answer — the system doesn’t just throw up a warning on the HMI and wait for someone to manually stop it. That would be too slow for safety.  </p>
+<hr />
+<p>Do you want me to make you a <strong>quick-reference RFID tag types list</strong> (like: normal navigation tags, course stop tags, 999 fault tags, etc.) so you can answer all the “tag function” questions in this TAC module at a glance?</p>
+<h2 id="2025-08-23t062013875711z-user">2025-08-23T06:20:13.875711Z — user</h2>
+<p>{"content_type": "image_asset_pointer", "asset_pointer": "file-service://file-7d3ULjCiKTymDAVP8AWhuf", "size_bytes": 228910, "width": 2295, "height": 4080, "fovea": null, "metadata": {"dalle": null, "gizmo": null, "generation": null, "container_pixel_height": null, "container_pixel_width": null, "emu_omit_glimpse_image": null, "emu_patches_override": null, "lpe_keep_patch_ijhw": null, "sanitized": true, "asset_pointer_link": null, "watermarked_asset_pointer": null}}</p>
+<h2 id="2025-08-23t062013990834z-assistant">2025-08-23T06:20:13.990834Z — assistant</h2>
+<p>The question on your screen is:  </p>
+<p><strong>“How does speed play a factor for the AGC when on the course?”</strong></p>
+<hr />
+<p>You’ve got two possible answers:</p>
+<ol>
+<li>
+<p><strong>Option 1:</strong>  </p>
+<blockquote>
+<p><em>The AGC must achieve a low speed prior to a stop tag in order to stop accurately. If it is traveling too fast, it could travel far enough to read the next tag and confuse the traffic control.</em>  </p>
+</blockquote>
+</li>
+<li>
+<p><strong>Option 2 (the one you selected):</strong>  </p>
+<blockquote>
+<p><em>The AGC must achieve a consistent speed prior to a stop tag in order to stop accurately. If it is traveling too slow, it could misread the tag and miss the stop.</em>  </p>
+</blockquote>
+</li>
+</ol>
+<hr />
+<p>✅ The <strong>correct answer is Option 1.</strong><br />
+AGCs need to <strong>slow down before stop tags</strong> so they don’t overshoot. If they’re moving too fast, they can roll past the intended stop, possibly reading the <em>next</em> tag and throwing off the traffic control system.  </p>
+<p>The second option is a trick — going “too slow” isn’t really the problem; overspeeding past the tag is.  </p>
+<hr />
+<p>Would you like me to put together a <strong>one-page cheat sheet on TAC AGC questions</strong> (tags, speed, faults, HMI, etc.) so you don’t have to think through each one — just quick recall?</p>
+</body>
+</html>

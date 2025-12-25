@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WSL Ubuntu installation fix</title>
+<style id="everlight-nav-style">
+      .everlight-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(127,127,127,.3);
+        font-family: system-ui, sans-serif;
+      }
+      .everlight-nav a {
+        text-decoration: none;
+        font-weight: 600;
+        opacity: .9;
+      }
+      .everlight-nav a:hover {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    </style>
+</head>
+<body>
+<nav class="everlight-nav">
+  <a class="prev" href="World disbelief expression.html">⟵ Previous</a>
+  <a class="index" href="index.html">🏠 Index</a>
+  <a class="next" href="WTMA EPP Prep Guide.html">Next ⟶</a>
+</nav>
+<hr />
+<p>conversation_id: "68ae40d5-de64-8328-a694-a442aa27fc5a"
+title: "WSL Ubuntu installation fix"
+accounts: ["Account1_exports"]
+models: []
+tags: []
+message_count: 5</p>
+<hr />
+<h1 id="wsl-ubuntu-installation-fix">WSL Ubuntu installation fix</h1>
+<h2 id="user">— user</h2>
+<h2 id="system">— system</h2>
+<h2 id="2025-08-26t231931984951z-user">2025-08-26T23:19:31.984951Z — user</h2>
+<p>{"content_type": "image_asset_pointer", "asset_pointer": "file-service://file-CkgYDHgVSCSg2yKSkdQ6uY", "size_bytes": 286678, "width": 2295, "height": 4080, "fovea": null, "metadata": {"dalle": null, "gizmo": null, "generation": null, "container_pixel_height": null, "container_pixel_width": null, "emu_omit_glimpse_image": null, "emu_patches_override": null, "lpe_keep_patch_ijhw": null, "sanitized": true, "asset_pointer_link": null, "watermarked_asset_pointer": null}}</p>
+<h2 id="2025-08-26t231932032057z-assistant">2025-08-26T23:19:32.032057Z — assistant</h2>
+<h2 id="2025-08-26t231932097871z-assistant">2025-08-26T23:19:32.097871Z — assistant</h2>
+<p>Ah, I see what’s happening here. You’re trying to enable the Ubuntu subsystem under WSL (Windows Subsystem for Linux) on Windows, and it mostly worked, but the feature didn’t fully start. Let’s break down the output:  </p>
+<ol>
+<li><strong>Installation succeeded:</strong>  </li>
+</ol>
+<pre><code>The requested operation completed successfully. 
+Downloading: Ubuntu
+Installing: Ubuntu
+The operation could not be started because a required feature is not installed.
+</code></pre>
+<p>The first part shows that the WSL feature itself was enabled successfully.  </p>
+<ol>
+<li><strong>Error detail:</strong>  </li>
+</ol>
+<pre><code>Error code: Wsl/InstallDistro/Service/RegisterDistro/CreateVm/HCS/HCS_E_SERVICE_NOT_AVAILABLE
+</code></pre>
+<p>This indicates that the actual Linux distro (Ubuntu) could not register with the Windows Host Compute Service. This usually happens if:<br />
+- Hyper-V or the Virtual Machine Platform is <strong>not enabled</strong>, or<br />
+- The system <strong>needs a reboot</strong> after enabling WSL, or<br />
+- There’s a mismatch between WSL versions (WSL1 vs WSL2), or<br />
+- Some services are not running correctly.</p>
+<ol>
+<li><strong>Next steps to fix it:</strong>  </li>
+<li><strong>Reboot</strong> your PC. Many WSL changes only take effect after a restart.  </li>
+<li>Make sure the following Windows features are <strong>enabled</strong>:  </li>
+<li><strong>Virtual Machine Platform</strong>  </li>
+<li><strong>Windows Hypervisor Platform</strong> (sometimes required)  </li>
+<li><strong>Windows Subsystem for Linux</strong>  </li>
+</ol>
+<p>You can enable them via PowerShell as administrator:  </p>
+<pre><code class="language-powershell">dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</code></pre>
+<p>Then reboot.  </p>
+<ul>
+<li>After reboot, set WSL2 as default and install Ubuntu again:  </li>
+</ul>
+<pre><code class="language-powershell">wsl --set-default-version 2
+wsl --install -d Ubuntu
+</code></pre>
+<p>That should register the distro correctly.  </p>
+<p>If you want, I can give you a <strong>step-by-step command sequence</strong> that usually gets this working cleanly on a fresh Windows setup. Do you want me to do that?</p>
+</body>
+</html>

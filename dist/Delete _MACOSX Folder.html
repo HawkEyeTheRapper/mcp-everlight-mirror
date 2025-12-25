@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Delete _MACOSX Folder</title>
+<style id="everlight-nav-style">
+      .everlight-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(127,127,127,.3);
+        font-family: system-ui, sans-serif;
+      }
+      .everlight-nav a {
+        text-decoration: none;
+        font-weight: 600;
+        opacity: .9;
+      }
+      .everlight-nav a:hover {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    </style>
+</head>
+<body>
+<nav class="everlight-nav">
+  <a class="prev" href="Delete Mac Account Help.html">⟵ Previous</a>
+  <a class="index" href="index.html">🏠 Index</a>
+  <a class="next" href="Deploy Astro Sites Repo.html">Next ⟶</a>
+</nav>
+<hr />
+<p>conversation_id: "6835a375-30f0-8011-af6d-a1170bf5b467"
+title: "Delete _MACOSX Folder"
+accounts: ["Account2_exports"]
+models: []
+tags: []
+message_count: 5</p>
+<hr />
+<h1 id="delete-_macosx-folder">Delete _MACOSX Folder</h1>
+<h2 id="user">— user</h2>
+<h2 id="system">— system</h2>
+<h2 id="2025-05-27t113516693151z-user">2025-05-27T11:35:16.693151Z — user</h2>
+<p>Can I safely delete the _MACOSX that gets created whenever I unzip things?</p>
+<h2 id="2025-05-27t113518759534z-assistant">2025-05-27T11:35:18.759534Z — assistant</h2>
+<p>Yes — you can <strong>safely delete the <code>__MACOSX</code> folder</strong> after unzipping files.</p>
+<h3 id="what-is-__macosx">What is <code>__MACOSX</code>?</h3>
+<p>It's a hidden system-generated folder created by macOS when zipping files. It stores:
+- Finder metadata (like folder view preferences)
+- Resource forks (used by old Mac files)
+- Aliases or custom attributes</p>
+<p>None of this is essential for <strong>Windows, Linux</strong>, or even most modern Mac workflows.</p>
+<h3 id="when-to-delete">When to delete:</h3>
+<ul>
+<li><strong>Yes:</strong> If you're moving files to a server, cross-platform project, or external storage.</li>
+<li><strong>Keep (optional):</strong> If you're zipping things again for Mac-only distribution and want to retain custom Finder attributes (rare case).</li>
+</ul>
+<p><strong>TL;DR:</strong><br />
+<code>rm -rf __MACOSX/</code><br />
+is safe and often preferable, especially for keeping archives clean.</p>
+<p>Let me know if you want an auto-clean script or a <code>.zip</code> creation method that skips this folder altogether.</p>
+<h2 id="2025-05-27t113525695913z-assistant">2025-05-27T11:35:25.695913Z — assistant</h2>
+</body>
+</html>

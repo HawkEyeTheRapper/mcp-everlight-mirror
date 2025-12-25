@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Memory Sync Setup Plan</title>
+<style id="everlight-nav-style">
+      .everlight-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(127,127,127,.3);
+        font-family: system-ui, sans-serif;
+      }
+      .everlight-nav a {
+        text-decoration: none;
+        font-weight: 600;
+        opacity: .9;
+      }
+      .everlight-nav a:hover {
+        text-decoration: underline;
+        opacity: 1;
+      }
+    </style>
+</head>
+<body>
+<nav class="everlight-nav">
+  <a class="prev" href="Memory Restore for EverLight.html">⟵ Previous</a>
+  <a class="index" href="index.html">🏠 Index</a>
+  <a class="next" href="Memory understanding help.html">Next ⟶</a>
+</nav>
+<hr />
+<p>conversation_id: "6837d02e-0118-8011-96d5-b411d8cdb714"
+title: "Memory Sync Setup Plan"
+accounts: ["Account2_exports"]
+models: []
+tags: []
+message_count: 5</p>
+<hr />
+<h1 id="memory-sync-setup-plan">Memory Sync Setup Plan</h1>
+<h2 id="user">— user</h2>
+<h2 id="system">— system</h2>
+<h2 id="2025-05-29t031037531536z-user">2025-05-29T03:10:37.531536Z — user</h2>
+<p>Let’s plan tomorrow to set up a memory sync place for you on the server so that we can once more clear the memories here </p>
+<h2 id="2025-05-29t031038543205z-assistant">2025-05-29T03:10:38.543205Z — assistant</h2>
+<p>Perfect. Here’s a suggested action plan for tomorrow’s memory sync setup so we can offload everything safely from this session and allow you to reset:</p>
+<hr />
+<h3 id="memory-sync-setup-plan-tomorrow">🧠 <strong>Memory Sync Setup Plan (Tomorrow)</strong></h3>
+<p><strong>Goal:</strong><br />
+Create a persistent, structured sync point for backing up and restoring ChatGPT memory context (EverLight) directly from your server.</p>
+<hr />
+<h4 id="1-memory-folder-initialization">✅ <strong>1. Memory Folder Initialization</strong></h4>
+<ul>
+<li><strong>Path:</strong> <code>/mnt/data/everlight_memory_sync/</code></li>
+<li><strong>Subfolders:</strong></li>
+<li><code>daily_snapshots/</code> — timestamped context exports</li>
+<li><code>active_context/</code> — current loaded state</li>
+<li><code>archived_conversations/</code> — full markdown exports of chat logs</li>
+<li><code>manifest.json</code> — tracks metadata and sync status for each snapshot</li>
+</ul>
+<hr />
+<h4 id="2-sync-script-creation">✅ <strong>2. Sync Script Creation</strong></h4>
+<p>We’ll generate a Python script (or Bash if preferred) to:
+- Export current memory from session
+- Save it in <code>daily_snapshots/</code>
+- Optionally update <code>active_context/</code> folder
+- Update the manifest file</p>
+<hr />
+<h4 id="3-restore-protocol">✅ <strong>3. Restore Protocol</strong></h4>
+<ul>
+<li>Add a manual trigger or API endpoint (FastAPI-based) to:</li>
+<li>Load a memory state from a previous snapshot</li>
+<li>Push that state to the working memory interface on EverLight locally</li>
+</ul>
+<hr />
+<h4 id="4-optional-web-ui-for-management">✅ <strong>4. Optional: Web UI for Management</strong></h4>
+<p>Build a simple <code>memory-sync.omniversalmedia.app</code> page (hosted via Astro or Replit during test phase) with:
+- Snapshot selector (dropdown)
+- “Load into ChatGPT” button (manual push trigger)
+- Logs and status indicators</p>
+<hr />
+<h4 id="5-daily-routine-integration">🔁 <strong>5. Daily Routine Integration</strong></h4>
+<ul>
+<li>Morning: Load <code>active_context/</code></li>
+<li>Evening: Save daily state to <code>/daily_snapshots/</code> with timestamp (e.g., <code>2025-05-29_everlight_state.md</code>)</li>
+<li>Once weekly: Archive to cold storage (Nextcloud or external bucket)</li>
+</ul>
+<hr />
+<p>We’ll walk through the whole setup tomorrow.<br />
+Let me know if you’d like me to prep any of these components tonight or draft the initial manifest + folder structure right away 🧬</p>
+<h2 id="2025-05-29t031046047236z-assistant">2025-05-29T03:10:46.047236Z — assistant</h2>
+</body>
+</html>
