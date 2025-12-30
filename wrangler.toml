@@ -6,6 +6,9 @@ compatibility_date = "2023-12-10"
 [pages]
 branch = "main"
 
+[assets]
+directory = "./dist"
+
 [pages.build]
 command = "python3 scripts/build-site.py"
-upload_dir = "dist/logs"
+upload_dir = "./dist/logs"
