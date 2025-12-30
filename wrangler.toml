@@ -8,4 +8,4 @@ branch = "main"
 
 [pages.build]
 command = "python3 scripts/build-site.py"
-upload_dir = "dist"
+upload_dir = "dist/logs"
